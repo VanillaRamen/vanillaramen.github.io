@@ -2,7 +2,7 @@
 
 // 🐟🐠🐡
 
-let regfish = document.getElementById('regfish');
+let regfish = document.getElementById('regfish'); // these should all be 0...
 console.log(document.getElementById('regfish'));
 let tropfish = document.getElementById('tropfish');
 console.log(document.getElementById('tropfish'));
