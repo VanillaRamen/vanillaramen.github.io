@@ -2,12 +2,12 @@
 
 // 🐟🐠🐡
 
-let regfish = document.getElementById('regfish'); // these should all be 0...
-console.log(document.getElementById('regfish'));
-let tropfish = document.getElementById('tropfish');
-console.log(document.getElementById('tropfish'));
-let puffers = document.getElementById('puffers');
-console.log(document.getElementById('puffers'));
+let regfish = document.getElementById('regfish').innerHTML; // these should all be 0...
+console.log(typeof document.getElementById('regfish').innerHTML);
+let tropfish = document.getElementById('tropfish').innerHTML;
+console.log(tropfish);
+let puffers = document.getElementById('puffers').innerHTML;
+console.log(typeof puffers);
 
 function fish() {
   if (Math.round(Math.random())) {
