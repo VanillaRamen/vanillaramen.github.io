@@ -2,25 +2,25 @@
 
 // 🐟🐠🐡
 
-let regfish = document.getElementById('regfish').innerHTML; // these should all be 0...
-console.log(typeof document.getElementById('regfish').innerHTML);
-let tropfish = document.getElementById('tropfish').innerHTML;
-console.log(tropfish);
-let puffers = document.getElementById('puffers').innerHTML;
-console.log(typeof puffers);
+let regfish = 0; // initalizations
+let tropfish = 0;
+let puffers = 0;
 
 function fish() {
   if (Math.round(Math.random())) {
     console.log('🐟');
-    regfish++;
-    console.log(regfish);
+    regfish++; // increment
+    document.getElementById('regfish').innerHTML = regfish; // update the value in HTML
+    document.getElementById('youcaught').innerHTML = 'You caught a regular fish!';
   } else if (Math.round(Math.random())) {
     console.log('🐠');
     tropfish++;
-    console.log(tropfish);
+    document.getElementById('tropfish').innerHTML = tropfish;
+    document.getElementById('youcaught').innerHTML = 'You caught a tropical fish!';
   } else if (Math.round(Math.random())) {
     console.log('🐡');
     puffers++;
-    console.log(puffers);
+    document.getElementById('puffers').innerHTML = puffers;
+    document.getElementById('youcaught').innerHTML = 'You caught a pufferfish!';
   } else { return fish() };
 } // preliminary
