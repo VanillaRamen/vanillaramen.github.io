@@ -10,17 +10,17 @@ function fish() {
   if (Math.round(Math.random())) {
     console.log('🐟');
     regfish++; // increment
-    document.getElementById('regfish').innerHTML = regfish; // update the value in HTML
-    document.getElementById('youcaught').innerHTML = 'You caught a regular fish!';
+    document.getElementById('regfish').textContent = regfish; // update the value in HTML
+    document.getElementById('youcaught').textContent = 'You caught a regular fish!';
   } else if (Math.round(Math.random())) {
     console.log('🐠');
     tropfish++;
-    document.getElementById('tropfish').innerHTML = tropfish;
-    document.getElementById('youcaught').innerHTML = 'You caught a tropical fish!';
+    document.getElementById('tropfish').textContent = tropfish;
+    document.getElementById('youcaught').textContent = 'You caught a tropical fish!';
   } else if (Math.round(Math.random())) {
     console.log('🐡');
     puffers++;
-    document.getElementById('puffers').innerHTML = puffers;
-    document.getElementById('youcaught').innerHTML = 'You caught a pufferfish!';
+    document.getElementById('puffers').textContent = puffers;
+    document.getElementById('youcaught').textContent = 'You caught a pufferfish!';
   } else { return fish() };
 } // preliminary
