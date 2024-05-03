@@ -1,17 +1,13 @@
-// session button clicker thing
-let counter = 0;
+// fisher
 
-function count() {
-  counter++;
-  // needs to update an html element
-}
+// 🐟🐠🐡
 
-// session to-do / reminder list
-let sessionreminders = [];
-
-function setremind(inp) {
-  sessionreminders.push(inp);
-  // needs to update an html element
-}
-
-// figure out how to make a timer as well
+function fish() {
+  if (Math.round(Math.random())) {
+    console.log('🐟');
+  } else if (Math.round(Math.random())) {
+    console.log('🐠');
+  } else if (Math.round(Math.random())) {
+    console.log('🐡');
+  } else { return fish() };
+} // preliminary
