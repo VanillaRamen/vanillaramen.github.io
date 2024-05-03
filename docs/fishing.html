@@ -16,6 +16,17 @@
     <p>Don't go away! Fish don't save between sessions (yet...)!</p>
     
     <script src='./mainscript.js'></script>
+    <script>
+function fish() {
+  if (Math.round(Math.random())) {
+    console.log('🐟');
+  } else if (Math.round(Math.random())) {
+    console.log('🐠');
+  } else if (Math.round(Math.random())) {
+    console.log('🐡');
+  } else { return fish() };
+}
+    </script>
     <button onclick='fish()'>Fish!</button>
     <table id='fishtable'>
       <tr>
