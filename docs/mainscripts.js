@@ -9,22 +9,22 @@ let [regfish, tropfish, puffers,
 // initialize variables as 0
 
 function fish() {
-  if ( Math.floor(Math.random() * 10) != 0 ) {
+  if ( Math.floor(Math.random() * 8) != 0 ) {
     // console.log('🐟'); // debug
     regfish++; // increment
     document.getElementById('regfish').textContent = regfish; // update the value in HTML
     document.getElementById('youcaught').textContent = 'You caught a regular fish!';
-  } else if ( Math.floor(Math.random() * 8) != 0 ) {
+  } else if ( Math.floor(Math.random() * 7) != 0 ) {
     // console.log('🐠'); // debug
     tropfish++;
     document.getElementById('tropfish').textContent = tropfish;
     document.getElementById('youcaught').textContent = 'You caught a tropical fish!';
-  } else if ( Math.floor(Math.random() * 8) != 0 ) {
+  } else if ( Math.floor(Math.random() * 6) != 0 ) {
     // console.log('🐡'); // debug
     puffers++;
     document.getElementById('puffers').textContent = puffers;
     document.getElementById('youcaught').textContent = 'You caught a pufferfish!';
-  } else if ( Math.floor(Math.random() * 6) != 0 ) {
+  } else if ( Math.floor(Math.random() * 5) != 0 ) {
     // console.log('🦑'); // debug
     squids++;
     document.getElementById('squids').textContent = squids;
