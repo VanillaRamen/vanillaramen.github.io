@@ -12,12 +12,12 @@ li {
   width: 300px;
   border: 2px solid black;
   border-collapse: separate;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 th,
 td {
-  padding: 2px;
+  padding: 0px 2px;
   border: 1px solid black;
 }
 
