@@ -5,7 +5,7 @@ body {
 }
 
 li {
-  color: #4ca198;
+  border: solid, #4ca198;
 }
 
 th,
