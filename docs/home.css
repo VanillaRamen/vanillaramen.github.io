@@ -8,9 +8,15 @@ li {
   color: #4ca198;
 }
 
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
 th,
 td {
-  border: 1px solid #000000;
+  padding: 2px;
+  border: 1px solid black;
 }
 
 .title {
