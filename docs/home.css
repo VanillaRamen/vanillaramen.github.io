@@ -15,7 +15,13 @@ li {
   table-layout: auto;
 }
 
-th,
+th {
+  width: 10px;
+  height: 20px;
+  padding: 0px 2px;
+  border: 1px solid black;
+}
+
 td {
   padding: 0px 2px;
   border: 1px solid black;
