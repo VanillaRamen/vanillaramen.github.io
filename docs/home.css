@@ -4,6 +4,10 @@ body {
   font-family: "Times New Roman", Times, sans-serif;
 }
 
+li {
+  color: #4ca198;
+}
+
 .title {
   color: #003262;
   font-family: Georgia, sans-serif;
@@ -14,14 +18,14 @@ body {
   margin: 20px 50px;
 }
 
+.links {
+  margin: 50px 10px;
+}
+
 #aboutme {
   color: #76f5e0;
 }
 
-li {
-  color: #4ca198;
-}
-
-.links {
-  margin: 50px 10px;
+#todolist {
+  text-align: left;
 }
