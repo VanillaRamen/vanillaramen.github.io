@@ -45,6 +45,7 @@ td {
   color: #76f5e0;
 }
 
-#todolist {
+#todolist,
+#songofthemoment {
   text-align: left;
 }
