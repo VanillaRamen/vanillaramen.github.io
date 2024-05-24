@@ -5,8 +5,9 @@
 let [regfish, tropfish, puffers,
      squids, octopuses, dragons] =
   [0, 0, 0,
-   0, 0, 0];
-// initialize variables as 0
+   0, 0, 0]; // initialize variables as 0
+let count = [regfish, tropfish, puffers, squids, octopuses, dragons]; // put them all in one space
+
 
 function fish() {
   if ( Math.floor(Math.random() * 7) != 0 ) {
