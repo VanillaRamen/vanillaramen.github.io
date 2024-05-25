@@ -2,11 +2,14 @@
 
 // 🐟🐠🐡🦑🐙🐉
 
-let [regfish_count, tropfish_count, puffers_count,
-     squids_count, octopuses_count, dragons_count] =
-  [0, 0, 0,
-   0, 0, 0]; // initialize variables as 0
-let count = [regfish_count, tropfish_count, puffers_count, squids_count, octopuses_count, dragons_count]; // put them all in one space
+let fishies = {
+     regfish: 0,
+     tropfish: 0,
+     puffers: 0,
+     squids: 0,
+     octopuses: 0,
+     dragons: 0
+};
 
 let ids = ['regfish', 'tropfish', 'puffers', 'squids', 'octopuses', 'dragons']; // element ids
 
@@ -14,11 +17,11 @@ const names = ['regular fish 🐟', 'tropical fish 🐠', 'pufferfish 🐡', 'sq
 
 function fish() { // fishing function
      let num = Math.floor(Math.random() * count.length);
-     count[num]++;
+     fishies[ids[num]]++;
      
-     console.log(names[num]); // debug
+     console.log(ids[num]); // debug
 
-     document.getElementById(ids[num]).textContent = count[num]; // sets the HTML & updates the page
+     document.getElementById(ids[num]).textContent = fishies[ids[num]]; // sets the HTML & updates the page
 
      document.getElementById('youcaught').textContent = 'You caught a' + names[num] + '!'; // tells you what you caught!
 } // beta code left below just in case... pls ignore
