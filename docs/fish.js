@@ -6,9 +6,27 @@ let [regfish, tropfish, puffers,
      squids, octopuses, dragons] =
   [0, 0, 0,
    0, 0, 0]; // initialize variables as 0
-let count = [regfish, tropfish, puffers, squids, octopuses, dragons]; // put them all in one space
+let count = [regfish_count, tropfish_count, puffers_count, squids_count, octopuses_count, dragons_count]; // put them all in one space
 
+let elems = [document.getElementById('regfish'), document.getElementById('tropfish'),
+             document.getElementById('puffers'), document.getElementById('squids'),
+             document.getElementById('octopuses'), document.getElementById('dragons')]; // elements by id
 
+const names = ['regular fish 🐟', 'tropical fish 🐠', 'pufferfish 🐡', 'squid 🦑', 'octopus 🐙', 'dragon 🐉']; // for 'you caught a...' message
+
+function fish() { // fishing function
+     let num = Math.floor(Math.random() * count.length);
+     count[num]++;
+     
+     console.log(names[num]); // debug
+
+     elems[num].textContent = count[num]; // sets the HTML & updates the page
+
+     document.getElementById('youcaught').textContent = 'You caught a' + names[num] + '!'; // tells you what you caught!
+} // beta code left below just in case... pls ignore
+     
+     
+/*
 function fish() {
   if ( Math.floor(Math.random() * 7) != 0 ) {
     // console.log('🐟'); // debug
@@ -42,3 +60,4 @@ function fish() {
     document.getElementById('youcaught').textContent = 'You caught a dragon!';
   } else { return fish() };
 } // fishing logic; need to redo to be a lot more efficient and concise
+*/
