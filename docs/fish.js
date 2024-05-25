@@ -16,7 +16,7 @@ let ids = ['regfish', 'tropfish', 'puffers', 'squids', 'octopuses', 'dragons']; 
 const names = ['regular fish 🐟', 'tropical fish 🐠', 'pufferfish 🐡', 'squid 🦑', 'octopus 🐙', 'dragon 🐉']; // for 'you caught a...' message
 
 function fish() { // fishing function
-     let num = Math.floor(Math.random() * count.length);
+     let num = Math.floor(Math.random() * ids.length);
      fishies[ids[num]]++;
      
      console.log(ids[num]); // debug
