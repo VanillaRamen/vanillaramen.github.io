@@ -8,9 +8,7 @@ let [regfish, tropfish, puffers,
    0, 0, 0]; // initialize variables as 0
 let count = [regfish_count, tropfish_count, puffers_count, squids_count, octopuses_count, dragons_count]; // put them all in one space
 
-let elems = [document.getElementById('regfish'), document.getElementById('tropfish'),
-             document.getElementById('puffers'), document.getElementById('squids'),
-             document.getElementById('octopuses'), document.getElementById('dragons')]; // elements by id
+let ids = ['regfish', 'tropfish', 'puffers', 'squids', 'octopuses', 'dragons']; // element ids
 
 const names = ['regular fish 🐟', 'tropical fish 🐠', 'pufferfish 🐡', 'squid 🦑', 'octopus 🐙', 'dragon 🐉']; // for 'you caught a...' message
 
@@ -20,7 +18,7 @@ function fish() { // fishing function
      
      console.log(names[num]); // debug
 
-     elems[num].textContent = count[num]; // sets the HTML & updates the page
+     document.getElementById(ids[num]).textContent = count[num]; // sets the HTML & updates the page
 
      document.getElementById('youcaught').textContent = 'You caught a' + names[num] + '!'; // tells you what you caught!
 } // beta code left below just in case... pls ignore
