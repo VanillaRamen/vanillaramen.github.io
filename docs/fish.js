@@ -2,8 +2,8 @@
 
 // 🐟🐠🐡🦑🐙🐉
 
-let [regfish, tropfish, puffers,
-     squids, octopuses, dragons] =
+let [regfish_count, tropfish_count, puffers_count,
+     squids_count, octopuses_count, dragons_count] =
   [0, 0, 0,
    0, 0, 0]; // initialize variables as 0
 let count = [regfish_count, tropfish_count, puffers_count, squids_count, octopuses_count, dragons_count]; // put them all in one space
