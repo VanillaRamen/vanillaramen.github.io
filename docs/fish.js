@@ -19,11 +19,11 @@ function fish() { // fishing function
      let tier = Math.floor(Math.random() * names.length);
      
      let num = Math.floor(Math.random() * names[tier].length);
-     fishies[ids[tier[num]]]++;
+     fishies[ids[tier][num]]++;
      
-     console.log(names[tier[num]]); // debug
+     console.log(names[tier][num]); // debug
 
-     document.getElementById(ids[tier[num]]).textContent = fishies[ids[tier[num]]]; // sets the HTML & updates the page
+     document.getElementById(ids[tier][num]).textContent = fishies[ids[tier][num]]; // sets the HTML & updates the page
 
-     document.getElementById('youcaught').textContent = 'You caught a ' + names[tier[num]] + '!'; // tells you what you caught!
+     document.getElementById('youcaught').textContent = 'You caught a ' + names[tier][num] + '!'; // tells you what you caught!
 };
