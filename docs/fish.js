@@ -11,17 +11,19 @@ let fishies = {
      dragons: 0
 };
 
-let ids = ['regfish', 'tropfish', 'puffers', 'squids', 'octopuses', 'dragons']; // element ids
+let ids = [['regfish', 'tropfish'], ['puffers', 'squids'], ['octopuses', 'dragons']]; // element ids
 
-const names = ['regular fish 🐟', 'tropical fish 🐠', 'pufferfish 🐡', 'squid 🦑', 'octopus 🐙', 'dragon 🐉']; // for 'you caught a...' message
+const names = [['regular fish 🐟', 'tropical fish 🐠'], ['pufferfish 🐡', 'squid 🦑'], ['octopus 🐙', 'dragon 🐉']]; // for 'you caught a...' message
 
 function fish() { // fishing function
-     let num = Math.floor(Math.random() * names.length);
-     fishies[ids[num]]++;
+     let tier = Math.floor(Math.random() * names.length);
      
-     console.log(names[num]); // debug
+     let num = Math.floor(Math.random() * names[tier].length);
+     fishies[ids[tier[num]]]++;
+     
+     console.log(names[tier[num]]); // debug
 
-     document.getElementById(ids[num]).textContent = fishies[ids[num]]; // sets the HTML & updates the page
+     document.getElementById(ids[tier[num]]).textContent = fishies[ids[tier[num]]]; // sets the HTML & updates the page
 
-     document.getElementById('youcaught').textContent = 'You caught a ' + names[num] + '!'; // tells you what you caught!
-} // i genuinely do not know what is wrong here
+     document.getElementById('youcaught').textContent = 'You caught a ' + names[tier[num]] + '!'; // tells you what you caught!
+};
