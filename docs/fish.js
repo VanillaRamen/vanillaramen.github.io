@@ -11,9 +11,9 @@ let fishies = {
      dragons: 0
 };
 
-let ids = [['regfish', 'tropfish'], ['puffers', 'squids'], ['octopuses', 'dragons']]; // element ids
+let ids = [['regfish', 'tropfish', 'puffers'], ['squids', 'octopuses'], ['dragons']]; // element ids
 
-const names = [['regular fish 🐟', 'tropical fish 🐠'], ['pufferfish 🐡', 'squid 🦑'], ['octopus 🐙', 'dragon 🐉']]; // for 'you caught a...' message
+const names = [['regular fish 🐟', 'tropical fish 🐠', 'pufferfish 🐡'], ['squid 🦑', 'octopus 🐙'], ['dragon 🐉']]; // for 'you caught a...' message
 
 function fish() { // fishing function
      let tier = Math.floor(Math.random() * names.length);
@@ -22,6 +22,7 @@ function fish() { // fishing function
      fishies[ids[tier][num]]++;
      
      console.log(names[tier][num]); // debug
+     console.log(fishies[ids[tier][num]]); // debug
 
      document.getElementById(ids[tier][num]).textContent = fishies[ids[tier][num]]; // sets the HTML & updates the page
 
