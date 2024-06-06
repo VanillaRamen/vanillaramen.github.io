@@ -17,7 +17,7 @@ const names = [['regular fish 🐟', 'tropical fish 🐠', 'pufferfish 🐡'], [
 
 function fish() { // fishing function
      let tier = Math.floor(Math.random() * 100);
-     tier = (tier >= 97) ? 2 : (tier >= 75) ? 1 : 0;
+     tier = ( (tier >= 97) ? 2 : (tier >= 75) ? 1 : 0 );
      
      let num = Math.floor(Math.random() * names[tier].length);
      fishies[ids[tier][num]]++;
