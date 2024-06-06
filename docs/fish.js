@@ -16,7 +16,8 @@ let ids = [['regfish', 'tropfish', 'puffers'], ['squids', 'octopuses'], ['dragon
 const names = [['regular fish 🐟', 'tropical fish 🐠', 'pufferfish 🐡'], ['squid 🦑', 'octopus 🐙'], ['dragon 🐉']]; // for 'you caught a...' message
 
 function fish() { // fishing function
-     let tier = Math.floor(Math.random() * names.length);
+     let tier = Math.floor(Math.random() * 100);
+     tier = (tier >= 95) ? 2 : (tier >= 60) ? 1 : 0;
      
      let num = Math.floor(Math.random() * names[tier].length);
      fishies[ids[tier][num]]++;
