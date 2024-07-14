@@ -2,6 +2,10 @@ body {
     background-color: #fff8d8;
 }
 
+p {
+    font-size: 18px;
+}
+
 .header {
     font-family: Helvetica, sans-serif;
     color: rgb(139, 76, 161)
@@ -24,14 +28,25 @@ body {
     padding: 2%;
 }
 
-#mushroomguy img {
-    width: 25%;
-    vertical-align: middle;
-}
-
 #mushroomguy {
     background-color: #fbcdbb;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mushroomguy img {
+    max-width: 50%;
+    border-radius: 5%;
+    border: 2px solid steelblue;
+    float: right;
+}
+
+#mushroomguy p {
+    float: left;
+    font-size: 24px;
+    text-align: center;
 }
 
 #bottom {
