@@ -1,0 +1,29 @@
+body {
+    background-color:rgb(251, 238, 255);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#welcomecontainer {
+    border-bottom: 8px double black;
+}
+
+nav {
+    border: 2px solid rgb(177, 91, 214);
+    margin: 10px 0;
+    padding: 0 1em;
+}
+
+.daycontainer p {
+    font-size: 16px;
+    text-indent: 1em;
+}
+
+.daycontainer h3 {
+    border-bottom: 1px solid black;
+}
+
+.daycontainer {
+    border-bottom: 2px dashed black;
+    margin-bottom: 1em;
+}
