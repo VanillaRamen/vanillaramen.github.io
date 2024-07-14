@@ -1,0 +1,39 @@
+body {
+    background-color: #fff8d8;
+}
+
+.header {
+    font-family: Helvetica, sans-serif;
+    color: rgb(139, 76, 161)
+}
+
+.bigheader {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(27, 23, 115)
+}
+
+.minorheader {
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: rgb(24, 129, 128);
+}
+
+.container {
+    text-align: center;
+    border: 4px solid #fbcdbb;
+    border-bottom: 2px solid #fbcdbb;
+    padding: 2%;
+}
+
+#mushroomguy img {
+    width: 50%;
+    vertical-align: middle;
+}
+
+#mushroomguy {
+    background-color: #fbcdbb;
+    padding: 0;
+}
+
+#bottom {
+    border-bottom: 4px solid #fbcdbb;
+}
