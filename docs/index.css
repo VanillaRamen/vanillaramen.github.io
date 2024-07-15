@@ -2,7 +2,7 @@ body {
     background-color: #fffbea;
 }
 
-p {
+p, a {
     font-size: 18px;
 }
 
