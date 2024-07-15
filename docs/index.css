@@ -24,7 +24,7 @@ p, a {
 .container {
     text-align: center;
     border: 4px solid #ffe8e2;
-    border-bottom: 2px solid #ffe8e2;
+    border-bottom: 0;
     padding: 2%;
 }
 
@@ -34,6 +34,8 @@ p, a {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border-bottom: 4px solid #ffe8e2;
 }
 
 #mushroomguy img {
