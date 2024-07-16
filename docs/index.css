@@ -28,6 +28,33 @@ p, a {
     padding: 2%;
 }
 
+#welcome {
+    display:flex;
+    flex-direction: column;
+}
+
+.scrollcontainer {
+    border: 2px solid #ffe8e2;
+    width: 50%; align-self: center;
+    overflow:hidden;
+    text-wrap:nowrap;
+    display:flex;
+}
+
+.scrolling {
+    animation: 8s linear infinite scroll;
+}
+
+@keyframes scroll {
+    0% {
+        translate: 0%;
+    }
+
+    100% {
+        translate: -50%;
+    }
+}
+
 #mushroomguy {
     background-color: #ffe8e2;
     padding: 0;
