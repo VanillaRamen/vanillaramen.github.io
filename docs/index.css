@@ -35,10 +35,11 @@ p, a {
 
 .scrollcontainer {
     border: 2px solid #ffe8e2;
-    width: 50%; align-self: center;
-    overflow:hidden;
-    text-wrap:nowrap;
-    display:flex;
+    width: 50%;
+    align-self: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    display: flex;
 }
 
 .scrolling {
