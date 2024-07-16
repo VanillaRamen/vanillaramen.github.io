@@ -52,7 +52,7 @@ p, a {
     }
 
     100% {
-        translate: -25%;
+        translate: -33.33%;
     }
 }
 
@@ -80,6 +80,6 @@ p, a {
     padding-left: 2em;
 }
 
-#bottom {
+.bottom {
     border-bottom: 4px solid #ffe8e2;
 }
