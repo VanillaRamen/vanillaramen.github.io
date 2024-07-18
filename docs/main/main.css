@@ -37,16 +37,22 @@ p, a {
     padding: 1em;
 }
 
-#welcome {
+.hasscroll {
     display:flex;
     flex-direction: column;
 }
 
 .scrollcontainer {
     border: 2px solid #ffe8e2;
+
     align-self: center;
+    /*Aligns itself
+    in the center of
+    a column flexbox.*/
+
     overflow: hidden;
     text-wrap: nowrap;
+    
     display: flex;
     width: 50%;
 }
@@ -61,7 +67,26 @@ p, a {
     }
 
     100% {
-        translate: -33.33%;
+        translate: calc(-100%/3);
+    }
+}
+
+#indexscroll {
+    width: 100%;
+    animation: 14s linear infinite index;
+}
+
+@keyframes index {
+    0%, 100% {
+        translate: 100%;
+    }
+
+    16.5%, 33%, 66.5%, 83% {
+        translate: 0%;
+    }
+
+    50% {
+        translate: -100%;
     }
 }
 

@@ -12,6 +12,7 @@ nav {
     border: 2px solid rgb(177, 91, 214);
     margin: 10px 0;
     padding: 0 1em;
+    color: rgb(185, 132, 150);
 }
 
 .daycontainer p {
@@ -26,4 +27,12 @@ nav {
 .daycontainer {
     border-bottom: 2px dashed black;
     margin-bottom: 1em;
+}
+
+nav a {
+    color: #e98bdc;
+}
+
+nav li {
+    color: #ac6ba3
 }
