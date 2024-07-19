@@ -1,7 +1,8 @@
 body {
     background-color:rgb(251, 238, 255);
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #welcomecontainer {
@@ -17,7 +18,7 @@ nav {
 
 .daycontainer p {
     font-size: 16px;
-    text-indent: 1em;
+    text-indent: 2rem;
 }
 
 .daycontainer h3 {
@@ -26,7 +27,7 @@ nav {
 
 .daycontainer {
     border-bottom: 2px dashed black;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 nav a {
@@ -34,5 +35,9 @@ nav a {
 }
 
 nav li {
-    color: #ac6ba3
+    color: #ac6ba3;
+}
+
+.blogtext .pink {
+    color: #e98bdc;
 }
