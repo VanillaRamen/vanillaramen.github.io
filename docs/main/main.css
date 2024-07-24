@@ -67,7 +67,7 @@ p, a {
     }
 
     100% {
-        translate: calc(-100%/3);
+        translate: calc(-100%/5);
     }
 }
 
