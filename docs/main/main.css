@@ -122,3 +122,9 @@ p, a {
     height: 31px;
     width: 88px;
 }
+
+#enter {
+    background-color: rgb(254, 208, 216);
+    border: 2px dashed rgb(220, 152, 170);
+    border-radius: 5%;
+}
