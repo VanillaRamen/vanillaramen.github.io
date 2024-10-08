@@ -128,3 +128,11 @@ p, a {
     border: 2px dashed rgb(220, 152, 170);
     border-radius: 5%;
 }
+
+.readinglist {
+    padding: 0 24%;
+}
+
+.readinglist li u {
+    color: #e98bdc;
+}
