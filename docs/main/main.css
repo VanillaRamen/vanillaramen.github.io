@@ -130,9 +130,13 @@ p, a {
 }
 
 .readinglist {
-    padding: 0 24%;
+    padding: 0 20%;
 }
 
-.readinglist li u {
+.readinglist u {
     color: #e98bdc;
+}
+
+#announcement p {
+    padding: 0 10%;
 }
