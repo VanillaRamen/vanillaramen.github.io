@@ -1,3 +1,20 @@
+/* style guide
+important items:
+    body
+    nav
+        a
+        li
+ids:
+    #welcomecontainer
+classes:
+    .textcontainer
+        ()
+        p
+        h3
+    .blogtext
+        .pink
+*/
+
 body {
     background-color:rgb(251, 238, 255);
     padding-left: 1rem;
