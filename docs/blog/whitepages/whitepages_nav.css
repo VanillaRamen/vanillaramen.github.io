@@ -1,0 +1,45 @@
+body {
+    background: linear-gradient(.25turn, #faebef, #f1f2f3 20%, #ffffff 80%);
+}
+
+.container {
+    text-align: center;
+    margin: 1.25em 2px;
+}
+
+.title {
+    border: 1px black solid;
+    transition: 3s;
+}
+
+.title:hover {
+    background-color: #ffffff;
+}
+
+.title span {
+    border: 2px rgba(0, 0, 0, 0.05) dashed;
+}
+
+.link {
+    margin: 1em 0em;
+}
+
+.page {
+    font-size: 1.25em;
+}
+
+.link a {
+    color: #ffc0cb;
+    transition: 1.5s;
+}
+
+.link a:hover {
+    color: #f391a1;
+    border: 1px rgba(255, 192, 203, 0.25) solid;
+    background-color: rgba(255, 192, 203, 0.25);
+}
+
+.sitenav {
+    margin: 0 40%;
+    border: 1px solid black;
+}

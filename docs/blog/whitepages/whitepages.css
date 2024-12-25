@@ -1,0 +1,22 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.title {
+    text-align: center;
+    color: #ffc0cb;
+}
+
+.text {
+    margin: 10%;
+}
+
+.text p {
+    margin: 1em;
+    text-indent: 1.5em;
+}
+
+.endcard {
+    text-align: right;
+}
