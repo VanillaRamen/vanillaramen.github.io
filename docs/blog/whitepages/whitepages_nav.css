@@ -5,19 +5,22 @@ body {
 .container {
     text-align: center;
     margin: 1.25em 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
     border: 1px black solid;
-    transition: 3s;
+    transition: 5s;
 }
 
 .title:hover {
-    background-color: #ffffff;
+    background-color: #ffbcdc3d;
 }
 
 .title span {
-    border: 2px rgba(0, 0, 0, 0.05) dashed;
+    color:#ffc0cb;
 }
 
 .link {
@@ -30,16 +33,46 @@ body {
 
 .link a {
     color: #ffc0cb;
-    transition: 1.5s;
+    transition: 2s;
+}
+
+.link {
+    border: 1px rgba(255, 255, 255, 0) solid;
 }
 
 .link a:hover {
     color: #f391a1;
-    border: 1px rgba(255, 192, 203, 0.25) solid;
-    background-color: rgba(255, 192, 203, 0.25);
+    border: 1px rgba(255, 192, 203, 0.485) solid;
+    background-color: rgba(255, 192, 203, 0.092);
 }
 
 .sitenav {
     margin: 0 40%;
+    padding: 0 1em;
     border: 1px solid black;
+}
+
+#maintitle { /* i followed a tutorial for this */
+    border-right: 1px solid black;
+    margin-inline: auto;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    animation: typing 1.5s steps(13) forwards,
+    blinking 1s step-end infinite;
+}
+
+@keyframes typing { /* i followed a tutorial for this */
+    from {
+        width: 0ch;
+    }
+
+    to {
+        width: 13ch;
+    }
+}
+
+@keyframes blinking { /* i followed a tutorial for this */
+    65% {
+        border: transparent;
+    }
 }
