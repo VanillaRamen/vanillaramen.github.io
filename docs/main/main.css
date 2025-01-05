@@ -35,6 +35,14 @@ p, a {
     border: 4px solid #ffe8e2;
     border-bottom: 0;
     padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container p {
+    max-width: 80ch;
 }
 
 .hasscroll {
