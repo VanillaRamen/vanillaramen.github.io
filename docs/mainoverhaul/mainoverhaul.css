@@ -44,11 +44,12 @@ a:hover {
     text-wrap: nowrap;
     overflow: hidden;
     font-family: 'Courier New', Courier, monospace;
-    width: 35ch;
+    max-width: 35ch;
+    min-width: 10vw;
 }
 
 .scroll {
-    animation: infinite 5s 2s ease-in-out alternate scroller;
+    animation: infinite 5s 1s ease-in-out alternate scroller;
 }
 
 @keyframes scroller {
@@ -57,7 +58,7 @@ a:hover {
     }
 
     to {
-        transform: translateX(-35ch);
+        transform: translateX(-100%);
     }
 }
 
@@ -80,6 +81,7 @@ a:hover {
 
 ul li {
     text-align: left;
+    max-width: 30ch;
 }
 
 .vertflex {
