@@ -1,0 +1,115 @@
+html {
+    height: 100%;
+    background-color: rgba(255, 228, 196, 0.5);
+    background-image: linear-gradient(rgb(238, 130, 238), 40%, rgba(255, 192, 203, 0.5));
+    border: 2px solid rgb(238, 130, 238);
+}
+
+body {
+    color: rgb(58, 6, 126);
+    display: flex;
+    flex-direction: column;
+
+    > div {
+        border-radius: 1.25rch;
+    }
+
+    hr {
+        border-color: rgb(58, 6, 126);
+    }
+
+    a {
+        color: rgb(76, 58, 122);
+        text-decoration: underline;
+        transition: 0.5s ease-in;
+    } a:hover {
+        transition: 0.7s ease-out;
+        color: rgb(105, 177, 201);
+        text-decoration: underline rgb(76, 58, 122);
+    }
+}
+
+
+
+
+.box {
+    border: 2px dashed purple;
+    align-self: center;
+    max-width: 60ch;
+    padding: 0 2rch;
+    margin: 1rem 0;
+
+    .scrollholder {
+        border: inherit;
+        overflow: hidden;
+        margin: inherit;
+        .scrolling {
+            > * {
+                transition: 2s;
+                font-family: 'Courier New', Courier, monospace;
+                text-align: center;
+                text-wrap: nowrap;
+
+                /*
+                border: 1px solid black;
+                /**/
+        
+                animation: 4s linear infinite scroll;
+            } > *:hover {
+                transition: 2s ease-in-out;
+                color: rgb(127, 255, 246);
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    100% {
+        translate: -23ch;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-items: stretch;
+
+    border: 2px dashed purple;
+    align-self: center;
+    max-width: 60ch;
+}
+
+.rowitem {
+    flex: 1 1;
+    padding: 0 2rch;
+
+
+    /*
+    border: 1px solid black;
+    /**/
+
+    > h1, > h2, > h3, > h4, > h5 {
+        text-align: center;
+    }
+
+    border-right: inherit;
+
+} .rowitem:last-of-type {
+    border-right: none;
+}
+
+
+#welcome {
+    > * {
+        text-align: center;
+    }
+
+    > h1 {
+        transition: 1s;
+    }
+
+    > h1:hover {
+        transition: 1s ease-in-out;
+        color: white;
+    }
+}
