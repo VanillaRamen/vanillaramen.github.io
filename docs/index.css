@@ -72,11 +72,11 @@ body {
 .row {
     display: flex;
     flex-direction: row;
-    justify-items: stretch;
+    justify-items: normal;
 
     border: 2px dashed purple;
     align-self: center;
-    max-width: 60ch;
+    max-width: 70ch;
 }
 
 .rowitem {
@@ -89,6 +89,9 @@ body {
     /**/
 
     > h1, > h2, > h3, > h4, > h5 {
+        /*
+        border: 1px solid black;
+        /**/
         text-align: center;
     }
 
