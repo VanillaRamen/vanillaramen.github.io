@@ -1,0 +1,35 @@
+html {
+    min-height: 99.2vh;
+}
+
+body {
+    color: lavender;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.box {
+    border: 1px solid lavenderblush;
+
+    min-width: 40ch;
+    max-width: 60ch;
+
+    padding: 0 2ch;
+    margin: 0 0 1em;
+
+    #title {
+        color: aliceblue;
+        text-align: center;
+    }
+
+    > p {
+        line-height: 2em;
+    }
+
+    > p:last-of-type {
+        margin-bottom: 1.5em;
+    }
+}
