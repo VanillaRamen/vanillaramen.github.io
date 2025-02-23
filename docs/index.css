@@ -1,11 +1,14 @@
 html {
-    height: 100%;
+    min-height: 99.2vh;
     background-color: rgba(255, 228, 196, 0.5);
-    background-image: linear-gradient(rgb(238, 130, 238), 40%, rgba(255, 192, 203, 0.5));
+    background-image: linear-gradient(rgb(238, 130, 238), 40vh, rgba(255, 192, 203, 0.5));
     border: 2px solid rgb(238, 130, 238);
 }
 
 body {
+    /* background-color: rgba(255, 228, 196, 0.5);
+    background-image: linear-gradient(rgb(238, 130, 238), 40vh, rgba(255, 192, 203, 0.5)); */
+
     color: rgb(58, 6, 126);
     display: flex;
     flex-direction: column;
@@ -27,9 +30,14 @@ body {
         color: rgb(110, 223, 219);
         text-decoration: underline rgb(76, 58, 122);
     }
+
+    button {
+        color: lightpink;
+        background-color: black;
+        border: 2px solid rgb(238, 130, 238);
+        border-radius: 0.4em;
+    }
 }
-
-
 
 
 .box {
@@ -41,6 +49,7 @@ body {
 
     .animholder {
         border: inherit;
+        border-radius: inherit;
         overflow: hidden;
         margin: inherit;
         > .scrollingurl {
