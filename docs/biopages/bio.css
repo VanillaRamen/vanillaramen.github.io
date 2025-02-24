@@ -24,6 +24,10 @@ a {
     padding: 0 2ch;
     margin: 0 0 1em;
 
+    background-image: linear-gradient(pink, 60%, lavender);
+    color: transparent;
+    background-clip: text;
+
     #title {
         color: aliceblue;
         text-align: center;
@@ -31,9 +35,7 @@ a {
 
     > p {
         line-height: 2em;
-    }
-
-    > p:last-of-type {
+    } > p:last-of-type {
         margin-bottom: 1.5em;
     }
 }
