@@ -1,8 +1,11 @@
 html {
     min-height: 99.2vh;
+
     background-color: rgba(255, 228, 196, 0.5);
     background-image: linear-gradient(rgb(238, 130, 238), 40vh, rgba(255, 192, 203, 0.5));
+
     border: 2px solid rgb(238, 130, 238);
+    scrollbar-width: none;
 }
 
 body {
