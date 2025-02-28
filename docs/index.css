@@ -164,4 +164,5 @@ body {
     filter: blur(.1em);
     color: transparent;
     background-color: transparent;
+    border-color: transparent;
 }
