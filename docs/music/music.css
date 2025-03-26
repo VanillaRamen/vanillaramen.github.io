@@ -15,7 +15,19 @@ body > div {
     min-width: 60ch;
     max-width: 80ch;
     /* border: 1px solid black; */
-    > h1, > h2, > h3 {
+
+    > p > a > button {
+        height: 3.5ch;
+        width: 3.5em;
+        color: rgb(255, 224, 229);
+        background-color: rgb(10, 3, 36);
+        border: solid rgb(10, 3, 36);
+        border-radius: 0.75ch;
+    }
+
+    > h1, > h2, > h3, > p {
         text-align: center;
     }
+
+
 }
