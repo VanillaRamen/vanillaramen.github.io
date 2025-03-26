@@ -1,0 +1,21 @@
+html {
+    background-color: rgb(255, 224, 229);
+    color: rgb(10, 3, 36);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+body > div {
+    min-width: 60ch;
+    max-width: 80ch;
+    /* border: 1px solid black; */
+    > h1, > h2, > h3 {
+        text-align: center;
+    }
+}
