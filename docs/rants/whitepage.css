@@ -1,0 +1,12 @@
+body {
+    background-color: lavenderblush;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > * {
+        width: 60rch;
+        font-family: Helvetica, Verdana, sans-serif;
+    }
+}
