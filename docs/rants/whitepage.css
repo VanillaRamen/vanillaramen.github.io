@@ -6,7 +6,15 @@ body {
     align-items: center;
 
     > * {
-        width: 60rch;
+        width: 64rch;
         font-family: Helvetica, Verdana, sans-serif;
     }
+}
+
+.highlight {
+    color: transparent;
+
+    background-image:
+        linear-gradient(90deg, purple, hotpink);
+    background-clip: text;
 }
