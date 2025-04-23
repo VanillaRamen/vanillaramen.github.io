@@ -50,12 +50,13 @@ body {
     max-width: 60ch;
     padding: 0 2rch;
     margin: 1rem 0;
+    border-radius: 1.25rch;
 
     .animholder {
-        border: inherit;
-        border-radius: inherit;
+        border: 2px dashed purple;
+        border-radius: 1.25rch;
         overflow: hidden;
-        margin: inherit;
+        margin: 1rem 0;
         > .scrollingurl {
             > * {
                 font-family: 'Courier New', Courier, monospace;
