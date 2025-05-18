@@ -3,7 +3,7 @@ html {
     flex-direction: column;
 
     scrollbar-width: thin;
-    scrollbar-color: rgb(158, 192, 221) white;
+    scrollbar-color:  white;
 }
 
 body {
@@ -21,6 +21,10 @@ header {
     }
 }
 
+a {
+    color: rgb(158, 192, 221);
+}
+
 .lr {
     display: flex;
     flex-direction: row;
@@ -34,25 +38,25 @@ header {
     }
 }
 
-.thick {
-    background-color: black;
-    height: 1px;
-}
-
 .content {
     padding: 0.25em 1ch;
     background-color: aliceblue;
     border-radius: 6px;
 }
 
-.emote {
-    font-family: sans-serif;
+.thick {
+    background-color: black;
+    height: 1px;
 }
 
 .centered {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.emote {
+    font-family: sans-serif;
 }
 
 .underlined {
