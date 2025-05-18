@@ -1,112 +1,106 @@
 <!doctype html>
 
-<html lang="en-US" id="top">
+<html id="top" lang="en-US">
     <head>
-        <title>Main Page</title>
+        <title>vanillaramen</title>
 
-        <meta charset="utf-8" />
-
-        <meta name="author" content="vanillaramen" />
-        <meta name="description" content="My personal website!" />
+        <meta charset="UTF-8" />
+        <meta
+            name="author"
+            content="vanillaramen"
+            />
+        <meta
+            name="description"
+            content="This is a website I made to test my skills!"
+            />
 
         <link rel="stylesheet" href="./index.css" />
     </head>
 
+
     <body>
-        <div class="box" id="welcome">
-            <h1>Welcome to my website!</h1>
-            <p>(intended for viewing on desktop environments)</p>
-            <a href="./secret/homepage.html"><hr></a>
+        <header>
+            <h1>vanillaramen</h1>
+            <h5>welcome to my website!!</h5>
+        </header>
+        <hr class="thick">
 
-            <h3 style="font-family:'Courier New', Courier, monospace;">You are on:</h3>
-            <div class="animholder">
-                <div class="scrollingurl">
-                    <p>
-                        vanillaramen.github.io
-                        vanillaramen.github.io
-                        vanillaramen.github.io
-                        vanillaramen.github.io
-                    </p>
-                </div>
-            </div>
-        </div>
+        <section class="lr">
 
-        <div class="row">
-            <div class="rowitem">
-                <nav><h3>Navigation</h3>
-                    <hr>
-                    <p><a href="./biopages/bio.html">
-                        About me (verbose)
-                    </a></p>
-                    <p><a href="./music/music.html">
-                        Music I've been listening to lately
-                    </a></p>
-                    <p><a href="./rants/interests.html">
-                        Interests
-                    </a></p>
-                </nav>
-            </div>
-
-            <div class="rowitem">
-                <h3>About me</h3>
-                <hr>
+        <section class="left">
+            <div class="content">
+                <h3>About Me</h3>
                 <p>
-                    Hi! I'm a computer engineering major, and I made this site from scratch using just HTML & CSS.
+                    I'm a computer engineering major just trying to do the things I want to do! <span class="emote">:D</span>
                 </p>
-
                 <p>
-                    I hope you like it!
-                </p>
-
-                <p>
-                    JavaScript features coming soon (or maybe never)!
+                    I'm set to graduate in 2028, and the things I love about computer engineering so far are how the smallest digital devices combine to make more powerful and complex machines, as well as how we can so freely make code to tell those machines what to do. It's so neat!
                 </p>
             </div>
-
-            <div class="rowitem">
-                <h3>Friends</h3>
-                <hr>
-
-                <p><a href="https://laaaw.straw.page/" target="_blank" rel="noreferrer">
-                    law's strawpage!
-                </a></p>
-
-                <p><a href="https://suzubuilder.crd.co/" target="_blank" rel="noreferrer">
-                    inter.tenare's art portfolio!
-                </a></p>
-
-                <p><a href="https://www.instagram.com/yyyyyyyylatan/" target="_blank" rel="noreferrer">
-                    nataly's instagram!
-                </a></p>
-
-                <p><a href="https://twitter.com/miamiamimimim" target="_blank" rel="noreferrer">
-                    mia's twitter!
-                </a></p>
+            <hr>
+            <div class="content">
+                <h3>About this website</h3>
+                <p>
+                    This is my personal website! I've gone through a couple of iterations on how I want my website to look, and what you're seeing now is the current one!
+                </p>
+                <p>
+                    I'm kind of going for something similar to Wikipedia's homepage, but of course it won't be exactly the same, and many other websites use a similar format.
+                </p>
+                <p>
+                    Do you think it's cool? I like how it's come out! <span class="emote">:D</span>
+                </p>
             </div>
-        </div>
+        </section> <!-- end "left" -->
 
-        <div class="box">
-            <p>Check out this website's
-                <a href="https://github.com/VanillaRamen/vanillaramen.github.io"
-                target="_blank"
-                referrerpolicy="noopener noreferrer">
-                    GitHub repository!
-                </a></p>
+        <section class="right">
+            <div class="content">
+                <h3>My friends!!!</h3>
+                <p>
+                    Go check out these awesome people!
+                </p>
+                    Some of my friends:
+                    <li><a href="https://twitter.com/miamiamimimim/">
+                        Mia - Twitter
+                    </a></li>
+                    <li><a href="https://laaaw.straw.page/">
+                        Law - Strawpage
+                    </a></li>
+                    <li><a href="https://suzubuilder.crd.co/">
+                        Inter.Tenare - Portfolio
+                    </a></li>
+                    <li><a href="https://www.instagram.com/yyyyyyyylatan/">
+                        Nataly - Instagram
+                    </a></li>
+                <p>
+                    Tell them I sent you!
+                </p>
+            </div>
+            <hr>
+            <div class="content">
+                <h3>Some links</h3>
+                <p>
+                    This website's
+                    <a href="https://github.com/VanillaRamen/vanillaramen.github.io">
+                        GitHub</a>!
+                </p>
+            </div>
+        </section> <!-- end "right" -->
 
-            <p style="text-align:center;">
-                And don't forget:<br>
+        </section> <!-- end "lr" -->
+
+        <hr class="thick">
+
+        <section>
+            <div class="content centered">
+                <p style="text-align:center">Don't forget:<br>
                 <a href="https://yesterweb.org/no-to-web3/"
-                   target="_blank"
-                   referrerpolicy="noopener noreferrer">
-                    <img src="./media/roly-saynotoweb3.gif" />
-                </a>
-            </p>
-        </div>
+                    target="_blank"
+                    referrerpolicy="noopener noreferrer">
+                <img src="./media/roly-saynotoweb3.gif" />
+                </a></p>
 
-        <div class="box">
-            <p><a href="./secret/secret.html"><button id="secret">
-                This button does nothing.
-            </button></a></p>
-        </div>
+                <p id="bottom"><a href="#top">Back to top</a></p>
+            </div>
+        </section>
     </body>
 </html>
