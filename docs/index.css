@@ -7,7 +7,8 @@ html {
 }
 
 body {
-    max-width: 80rch;
+    min-width: 60rch;
+    max-width: 100rch;
     align-self: center;
 
     border: 2px lavender dashed;
@@ -15,7 +16,7 @@ body {
 }
 
 header {
-    padding: 0.5rem 0.5rch 0px;
+    padding: 0.5rem 1rch 0px;
     > * {
         line-height: 0px;
     }
@@ -30,8 +31,8 @@ a {
     flex-direction: row;
     gap: 1%;
 
-    max-width: 80rch;
-    min-width: 60rch;
+    max-width: inherit;
+    min-width: inherit;
 
     > * {
         width: 50%;
@@ -65,16 +66,16 @@ a {
 }
 
 header > h1 {
-    animation: 3s ease-in-out both 0.7s 1 fade-in-black;
+    animation: 3s ease-in-out both 0.7s 1 fade-in;
 }
 
 header > h5 {
-    animation: 4s ease-in-out both 1.4s 1 fade-in-black;
+    animation: 4s ease-in-out both 1.4s 1 fade-in;
 }
 
-@keyframes fade-in-black {
+@keyframes fade-in {
     from {
-        color: #fff;
+        color: transparent;
     }
     to {
         color: inherit;
