@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    padding-top: 0.5rem;
+    padding: 0.5rem 0.5rch 0px;
     > * {
         line-height: 0px;
     }
@@ -62,4 +62,21 @@ a {
 .underlined {
     font-style: normal;
     text-decoration: underline;
+}
+
+header > h1 {
+    animation: 3s ease-in-out both 0.7s 1 fade-in-black;
+}
+
+header > h5 {
+    animation: 4s ease-in-out both 1.4s 1 fade-in-black;
+}
+
+@keyframes fade-in-black {
+    from {
+        color: #fff;
+    }
+    to {
+        color: inherit;
+    }
 }
