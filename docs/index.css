@@ -1,22 +1,25 @@
+* {
+    scrollbar-width: thin;
+    scrollbar-color: aliceblue lavender;
+    scroll-behavior: smooth;
+}
+
 html {
     display: flex;
     flex-direction: column;
-
-    scrollbar-width: thin;
-    scrollbar-color: aliceblue lavender;
 }
 
 body {
-    min-width: 60rch;
-    max-width: 100rch;
+    min-width: 60ch;
+    max-width: 100ch;
     align-self: center;
 
     border: 2px lavender dashed;
-    padding: 0.5rch;
+    padding: 0.5ch;
 }
 
 header {
-    padding: 0.5rem 1rch 0px;
+    padding: 0.5rem 1ch 0px;
     > * {
         line-height: 0px;
     }
@@ -31,11 +34,16 @@ a {
     flex-direction: row;
     gap: 1%;
 
-    max-width: inherit;
     min-width: inherit;
+    max-width: 100ch;
 
     > * {
         width: 50%;
+
+        > div {
+            max-height: 40ch;
+            overflow: auto;
+        }
     }
 }
 
@@ -56,7 +64,7 @@ a {
     align-items: center;
 }
 
-.emote {
+span.emote {
     font-family: sans-serif;
 }
 
@@ -81,4 +89,8 @@ header > h5 {
     to {
         color: inherit;
     }
+}
+
+nav > ul {
+    list-style: outside;
 }
