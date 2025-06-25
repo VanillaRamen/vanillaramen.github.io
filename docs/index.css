@@ -29,7 +29,7 @@ a {
     color: rgb(158, 192, 221);
 }
 
-.lr {
+.lr { /* horizontal section */
     display: flex;
     flex-direction: row;
     gap: 1%;
@@ -37,7 +37,7 @@ a {
     min-width: inherit;
     max-width: 100ch;
 
-    > * {
+    > .left, > .right { /* vertical sections */
         width: 50%;
 
         > div {
@@ -55,8 +55,9 @@ a {
     transition: 0.5s ease-out background-color;
 
     &:hover {
-        background-color: rgb(220, 245, 255);
-        transition: 1s ease-out background-color;
+        background-color: rgb(229, 248, 255);
+        /* darken transition */
+        transition: 2s ease-out background-color;
     }
 }
 
