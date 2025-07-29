@@ -13,52 +13,74 @@ html {
 }
 
 body {
-    min-width: 40rch;
-    max-width: 60rch;
+    min-width: 50rch;
+    max-width: 80rch;
 }
 
-header > div {
+body > *:hover .cmd::before {
+    animation: 0.25s steps(2, jump-none) 3 blink;
+}
+
+.cmd::before {
+    font-family: sans-serif;
+    font-size: smaller;
+    content: "> ";
+}
+
+header {
     display: flex;
     flex-direction: row;
     align-items: center;
 
-    overflow-x: hidden;
-    > :first-of-type {
-        line-height: 0.25em;
+    border-bottom: 0.1px solid white;
 
-        animation: 2s 0.5s 1 both ease-out slide-in;
+    overflow-x: hidden;
+    > div:first-of-type {
+        line-height: 0.1em;
+
+        animation:
+            3s 0.5s 1 both ease-in-out slide-in,
+            3s 0.5s 1 backwards ease-in fade-in;
 
         flex: 1;
 
         height: 4em;
     }
 
-    > :nth-of-type(2) {
+    > div:nth-of-type(2) {
         flex: 2;
 
         height: 1em;
 
         overflow-y: hidden;
 
-        > p {
-            color: transparent;
-            animation: 1s 3s infinite linear scrolldown;
+        p.scrolldowntext {
+            animation:
+                1s 2s infinite ease-in-out scrolldown,
+                2s 2s 1 ease-in forwards fade-in;
         }
+    } > div:nth-of-type(2):hover .scrolldowntext {
+        animation-play-state: paused;
     }
 
     h4 {
         text-decoration: underline;
     }
+} header:hover {
+    background-image: linear-gradient(to top, #777, 1px, #000);
+}
 
-    span.blinker {
-        font-family: sans-serif;
-        font-size: smaller;
+@keyframes fade-in {
+    from {
+        color: #0000;
+    } to {
+        color: #fff;
     }
 }
 
 @keyframes slide-in {
     from {
-        translate: 60rch;
+        translate: 300% 0;
     } to {
         translate: 0%;
     }
@@ -66,20 +88,12 @@ header > div {
 
 @keyframes scrolldown {
     from {
-        color: inherit;
+        /* color: inherit; */
         translate: 0px -1em;
     }
     to {
-        color: inherit;
+        /* color: inherit; */
         translate: 0px calc(-2em - 2px);
-    }
-}
-
-header:hover {
-    background-image: linear-gradient(to top, #777, 1px, #000);
-
-    span.blinker {
-        animation: 0.2s steps(3, jump-none) 3 blink;
     }
 }
 
@@ -92,18 +106,32 @@ article {
     :first-child::first-line {
         text-decoration: underline;
     }
-
-    span.blinker {
-        font-family: sans-serif;
-        font-size: smaller;
-    }
+} article:hover {
+    animation: 3s 0s steps(6, jump-start) forwards infinite rainbowlight;
 }
 
-article:hover {
-    background-image: linear-gradient(to top, #777, 1px, black);
-
-    span.blinker {
-        animation: 0.25s steps(2, jump-none) 3 blink;
+@keyframes rainbowlight {
+    0% {
+        /* color: #f00; */
+        background: linear-gradient(to top, #700, 0.1px, #000);
+    } 16.67% {
+        /* color: #ff0; */
+        background: linear-gradient(to top, #770, 0.1px, #000);
+    } 33.33% {
+        /* color: #0f0; */
+        background: linear-gradient(to top, #070, 0.1px, #000);
+    } 50.00% {
+        /* color: #0ff; */
+        background: linear-gradient(to top, #077, 0.1px, #000);
+    } 66.67% {
+        /* color: #00f; */
+        background: linear-gradient(to top, #007, 0.1px, #000);
+    } 83.33% {
+        /* color: #f0f; */
+        background: linear-gradient(to top, #707, 0.1px, #000);
+    } 100.0% {
+        /* color: #f00; */
+        background: linear-gradient(to top, #700, 0.1px, #000);
     }
 }
 
