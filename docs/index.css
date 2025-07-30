@@ -5,6 +5,7 @@ html {
 
     background-color: #000;
     color: #fff;
+    background-image: linear-gradient(to right, #ffffff18, 0.1%, #0000, 99.9%, #ffffff18);
 
     font-family: 'Courier New', Courier, monospace;
 
@@ -15,10 +16,14 @@ html {
 body {
     min-width: 50rch;
     max-width: 80rch;
+
+    > *:hover .cmd::before {
+        animation: 0.25s steps(2, jump-none) 3 blink;
+    }
 }
 
-body > *:hover .cmd::before {
-    animation: 0.25s steps(2, jump-none) 3 blink;
+p:not(p > *) {
+    text-indent: 1rch;
 }
 
 .cmd:not(h2) {
@@ -103,7 +108,7 @@ header {
 article {
     border: 1px solid white;
 
-    padding: 0px 0.5ch;
+    padding: 0px 1ch;
     margin: 1em 0px;
 } article:hover {
     animation: 3s 0s steps(6, jump-start) forwards infinite rainbowlight;
