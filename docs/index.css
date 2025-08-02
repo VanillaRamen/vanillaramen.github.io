@@ -3,9 +3,11 @@ html {
     flex-direction: column;
     align-items: center;
 
-    background-color: #000;
     color: #fff;
-    background-image: linear-gradient(to right, #ffffff18, 0.1%, #0000, 99.9%, #ffffff18);
+    background:
+        linear-gradient(to right, #f002, 1px, #0000),
+        linear-gradient(to left, #00f2, 1px, #0000),
+        #000;
 
     font-family: 'Courier New', Courier, monospace;
 
@@ -22,8 +24,26 @@ body {
     }
 }
 
+*::selection {
+    text-shadow:
+        -1px 0px 0px #faa,
+        1px 0px 0px #aaf;
+    background-color: #fff;
+    color: #000;
+}
+
 p:not(p > *) {
     text-indent: 1ch;
+} p:not(p.scrolldowntext) {
+    text-shadow: none;
+    transition: text-shadow 2s;
+    animation: 3s 2s infinite alternate ease-in-out pulsate;
+} *:not(html, body):hover p:not(p.scrolldowntext) {
+    animation: none;
+    text-shadow:
+        -0.5px 0.5px 0px #f88,
+        0.5px -0.5px 0px #8ff;
+    transition: text-shadow 5s;
 }
 
 .cmd:not(h2) {
@@ -47,7 +67,8 @@ header {
 
         animation:
             3s 0.5s 1 both ease-in-out slide-in,
-            3s 0.5s 1 backwards ease-in fade-in;
+            3s 0.5s 1 backwards ease-in fade-in,
+            5s 3.5s infinite alternate ease-in-out pulsate;
 
         flex: 2;
 
@@ -78,33 +99,6 @@ header {
     background-image: linear-gradient(to top, #777, 1px, #000);
 }
 
-@keyframes fade-in {
-    from {
-        color: #0000;
-    } to {
-        color: #fff;
-    }
-}
-
-@keyframes slide-in {
-    from {
-        translate: 300% 0;
-    } to {
-        translate: 0%;
-    }
-}
-
-@keyframes scrolldown {
-    from {
-        /* color: inherit; */
-        translate: 0px -1em;
-    }
-    to {
-        /* color: inherit; */
-        translate: 0px calc(-2em - 2px);
-    }
-}
-
 article {
     border: 1px solid white;
 
@@ -112,6 +106,24 @@ article {
     margin: 1em 0px;
 } article:hover {
     animation: 3s 0s steps(6, jump-start) forwards infinite rainbowlight;
+}
+
+#sitenav {
+    list-style: inside;
+    nav {
+        margin-bottom: 1em;
+    }
+
+    li::marker {
+        content: "▷ ";
+        font-size: small;
+    }
+
+    a {
+        color: pink;
+    }
+} #sitenav:last-child {
+    margin-bottom: 1em;
 }
 
 @keyframes rainbowlight {
@@ -147,20 +159,39 @@ article {
     }
 }
 
-#sitenav {
-    list-style: inside;
-    nav {
-        margin-bottom: 1em;
+@keyframes pulsate {
+    0%, 80% {
+        text-shadow: none;
+    } 100% {
+        text-shadow:
+            -0.5px 0.5px 0px #f88,
+            0.5px -0.5px 0px #8ff;
     }
+}
 
-    li::marker {
-        content: "▷ ";
-        font-size: small;
+@keyframes fade-in {
+    from {
+        color: #0000;
+    } to {
+        color: #fff;
     }
+}
 
-    a {
-        color: pink;
+@keyframes slide-in {
+    from {
+        translate: 300% 0;
+    } to {
+        translate: 0%;
     }
-} #sitenav:last-child {
-    margin-bottom: 1em;
+}
+
+@keyframes scrolldown {
+    from {
+        /* color: inherit; */
+        translate: 0px -1em;
+    }
+    to {
+        /* color: inherit; */
+        translate: 0px calc(-2em - 2px);
+    }
 }
