@@ -24,7 +24,7 @@ body {
     }
 }
 
-*::selection {
+::selection {
     text-shadow:
         -1px 0px 0px #faa,
         1px 0px 0px #aaf;
@@ -50,6 +50,11 @@ body {
     margin-bottom: 1em;
 }
 
+a:not(a[rel="noreferrer noopener"]) {
+    color: unset;
+    text-decoration: none;
+}
+
 .cmd:not(#top) {
     text-decoration: solid underline;
 } .cmd::before {
@@ -58,18 +63,16 @@ body {
     content: "> ";
 }
 
-p:not(p > *) {
+p {
     text-indent: 1ch;
-} p:not(p.scrolldowntext) {
+} :is(header, article) p {
     text-shadow: none;
     transition: text-shadow 2s;
-    animation: 3s 2s infinite alternate ease-in-out pulsate;
-} *:not(html, body):hover p:not(p.scrolldowntext) {
-    animation: none;
+} :is(header, article):hover p {
     text-shadow:
-        -0.5px 0.5px 0px #f88,
-        0.5px -0.5px 0px #8ff;
-    transition: text-shadow 5s;
+        -1px 1px 0px #f888,
+        1px -1px 0px #8ff8;
+    transition: text-shadow 1s;
 }
 
 header {
@@ -84,9 +87,9 @@ header {
         line-height: 0.25em;
 
         animation:
-            3s 0.5s 1 both ease-in-out slide-in,
-            3s 0.5s 1 backwards ease-in fade-in,
-            5s 3.5s infinite alternate ease-in-out pulsate;
+            4s 0.5s 1 both ease-in-out slide-in,
+            4s 0.5s 1 backwards ease-in fade-in,
+            2s 4.5s infinite alternate ease-in-out pulsate;
 
         flex: 1;
     }
@@ -94,15 +97,17 @@ header {
     > div:has(#top) + * {
         flex: 1;
 
-        height: 1em;
+        height: calc(1em + 3px);
 
         overflow-y: hidden;
 
         p.scrolldowntext {
             animation:
                 1s 2s infinite ease-in-out scrolldown,
-                2s 2s 1 ease-in forwards fade-in;
+                2s 2s 1 ease-in both fade-in;
             text-align: right;
+            border-right: 0.1px solid white;
+            padding-right: 0.5ch;
         }
     } > div:has(#top) + *:hover .scrolldowntext {
         animation-play-state: paused;
@@ -122,12 +127,19 @@ article {
     margin: 1em 0px;
 
     background-color: #000;
-    transition: transform 2s 1s, background-color 2s;
+    transition:
+        rotate 2s 0.5s,
+        scale 2s 0.5s,
+        background-color 2s;
 } article:hover {
     animation: 3s 0s steps(6, jump-start) forwards infinite rainbowlight;
 
-    transform: rotate(-0.2deg);
-    transition: transform 2s, background-color 2s;
+    rotate: -0.2deg;
+    scale: 1.0025;
+    transition:
+        rotate 4s,
+        scale 2s,
+        background-color 2s;
 }
 
 @keyframes rainbowlight {
@@ -176,8 +188,10 @@ article {
 @keyframes fade-in {
     from {
         color: #0000;
+        border-color: transparent;
     } to {
         color: #fff;
+        border-color: currentColor;
     }
 }
 
@@ -191,11 +205,9 @@ article {
 
 @keyframes scrolldown {
     from {
-        /* color: inherit; */
         translate: 0px -1em;
     }
     to {
-        /* color: inherit; */
-        translate: 0px calc(-2em - 2px);
+        translate: 0px calc(-2em - 2.1px);
     }
 }
