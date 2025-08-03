@@ -5,8 +5,8 @@ html {
 
     color: #fff;
     background:
-        linear-gradient(to right, #f002, 1px, #0000),
-        linear-gradient(to left, #00f2, 1px, #0000),
+        linear-gradient(to right, #ccc2, 1px, #0000),
+        linear-gradient(to left, #ccc2, 1px, #0000),
         #000;
 
     font-family: 'Courier New', Courier, monospace;
