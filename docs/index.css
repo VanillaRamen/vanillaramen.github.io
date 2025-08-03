@@ -53,6 +53,9 @@ body {
 a:not(a[rel="noreferrer noopener"]) {
     color: unset;
     text-decoration: none;
+} a#return {
+    color: pink;
+    text-decoration: underline;
 }
 
 .cmd:not(#top) {
