@@ -133,8 +133,7 @@ article {
     background-color: #000;
     transition:
         rotate 2s 0.5s,
-        scale 2s 0.5s,
-        background-color 2s;
+        scale 2s 0.5s;
 } article:hover {
     animation: 3s 0s steps(6, jump-start) forwards infinite rainbowlight;
 
@@ -142,8 +141,7 @@ article {
     scale: 1.0025;
     transition:
         rotate 4s,
-        scale 2s,
-        background-color 2s;
+        scale 2s;
 }
 
 @keyframes rainbowlight {
