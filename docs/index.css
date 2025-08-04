@@ -25,9 +25,8 @@ body {
 }
 
 ::selection {
-    text-shadow:
-        -1px 0px 0px #faa,
-        1px 0px 0px #aaf;
+    text-shadow: 1px 1px 0px #0004;
+
     background-color: #fff;
     color: #000;
 }
@@ -68,15 +67,16 @@ a:not(a[rel="noreferrer noopener"]) {
 
 p {
     text-indent: 1ch;
-} :is(header, article) p {
+}
+/* :is(header, article) p {
     text-shadow: none;
-    transition: text-shadow 2s;
+    transition: text-shadow 1s;
 } :is(header, article):hover p {
     text-shadow:
         -1px 1px 0px #f888,
         1px -1px 0px #8ff8;
-    transition: text-shadow 1s;
-}
+    transition: text-shadow 3s;
+} */
 
 header {
     display: flex;
@@ -124,24 +124,37 @@ header {
 }
 
 article {
+    /* regular styling stuff */
     border: 1px solid white;
-
     padding: 0px 1ch;
     margin: 1em 0px;
 
-    background: linear-gradient(to top, #0000, 1px, #000);
+    /* hide bg image */
+    box-shadow: inset 100vw 100vh #000;
+    /* bg image and styling */
+    background: linear-gradient(to top, #000, 1px, #0000), url("media/clouds_foreground_pole_newsprinted_cmyk.jpg");
+    background-size: cover;
+    background-position: center;
+
+    /* opaque background */
     background-color: #000;
+
     transition:
         rotate 2s 0.5s,
-        scale 2s 0.5s;
+        scale 2s 0.5s,
+        box-shadow 2s 0.5s;
 } article:hover {
-    animation: 3s 0s steps(6, jump-start) forwards infinite rainbowlight;
+    /* show bg image (darkened) */
+    box-shadow: inset 100vw 100vh #000b;
 
-    rotate: -0.2deg;
+    /* look fancy to show hover */
+    rotate: -0.4deg;
     scale: 1.0025;
+
     transition:
         rotate 4s,
-        scale 2s;
+        scale 2s,
+        box-shadow 2s ease-in-out;
 }
 
 @keyframes rainbowlight {
@@ -160,7 +173,15 @@ article {
     } 100.0% {
         background-color: #700;
     }
-}
+} /* currently unused */
+
+@keyframes pulselight {
+    0%, 70% {
+        background-color: #000;
+    } 100% {
+        background-color: #fff;
+    }
+} /* currently unused */
 
 @keyframes blink {
     from {
