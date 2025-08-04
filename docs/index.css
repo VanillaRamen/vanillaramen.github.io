@@ -116,7 +116,7 @@ header {
         p.splash {
             animation:
                 2s 2s 1 ease-in both fade-in,
-                calc(3s * 4) 2s linear infinite splash,
+                12s 2s linear infinite splash,
                 2.5s 3s infinite ease-in-out alternate pulsate;
 
             text-align: right;
