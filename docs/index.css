@@ -116,8 +116,7 @@ header {
         p.splash {
             animation:
                 2s 2s 1 ease-in both fade-in,
-                calc(3s * 4) 2s linear infinite splash,
-                2.5s 3s infinite ease-in-out alternate pulsate;
+                calc(3s * 4) 2s linear infinite splash;
 
             text-align: right;
             border-right: 0.1px solid white;
@@ -125,9 +124,9 @@ header {
 
             line-height: 1em;
 
-            /* min-width: 28ch;
+            min-width: 28ch;
             overflow-x: hidden;
-            scrollbar-width: none; */
+            scrollbar-width: none;
         }
 
         &:hover :is(.scrolldowntext, .splash) {
