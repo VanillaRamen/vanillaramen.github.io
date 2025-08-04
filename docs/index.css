@@ -45,8 +45,10 @@ body {
     a {
         color: pink;
     }
-} #sitenav:last-child {
-    margin-bottom: 1em;
+
+    &:last-child {
+        margin-bottom: 1em;
+    }
 }
 
 a:not(a[rel="noreferrer noopener"]) {
@@ -57,26 +59,21 @@ a:not(a[rel="noreferrer noopener"]) {
     text-decoration: underline;
 }
 
-.cmd:not(#top) {
-    text-decoration: solid underline;
-} .cmd::before {
-    font-family: sans-serif;
-    font-size: smaller;
-    content: "> ";
+.cmd {
+    &:not(#top) {
+        text-decoration: solid underline;
+    }
+
+    &::before {
+        font-family: sans-serif;
+        font-size: smaller;
+        content: "> ";
+    }
 }
 
 p {
     text-indent: 1ch;
 }
-/* :is(header, article) p {
-    text-shadow: none;
-    transition: text-shadow 1s;
-} :is(header, article):hover p {
-    text-shadow:
-        -1px 1px 0px #f888,
-        1px -1px 0px #8ff8;
-    transition: text-shadow 3s;
-} */
 
 header {
     display: flex;
@@ -119,8 +116,10 @@ header {
     #top + * {
         text-decoration: underline;
     }
-} header:hover {
-    background-image: linear-gradient(to top, #777, 1px, #000);
+
+    &:hover {
+        background-image: linear-gradient(to top, #777, 1px, #000);
+    }
 }
 
 article {
@@ -143,18 +142,20 @@ article {
         rotate 2s 0.5s,
         scale 2s 0.5s,
         box-shadow 2s 0.5s;
-} article:hover {
-    /* show bg image (darkened) */
-    box-shadow: inset 100vw 100vh #000b;
 
-    /* look fancy to show hover */
-    rotate: -0.4deg;
-    scale: 1.0025;
+    &:hover {
+        /* show bg image (darkened) */
+        box-shadow: inset 100vw 100vh #000b;
 
-    transition:
-        rotate 4s,
-        scale 2s,
-        box-shadow 2s ease-in-out;
+        /* look fancy to show hover */
+        rotate: -0.4deg;
+        scale: 1.0025;
+
+        transition:
+            rotate 4s,
+            scale 2s,
+            box-shadow 2s ease-in-out;
+    }
 }
 
 @keyframes rainbowlight {
