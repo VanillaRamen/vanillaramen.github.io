@@ -94,10 +94,10 @@ header {
         flex: 1;
     }
 
-    > div:has(#top) + * {
+    > div:has(#top) + div {
         flex: 1;
 
-        height: calc(1em + 3px);
+        height: 1em;
 
         overflow-y: hidden;
 
@@ -105,12 +105,38 @@ header {
             animation:
                 1s 2s infinite ease-in-out scrolldown,
                 2s 2s 1 ease-in both fade-in;
+
             text-align: right;
             border-right: 0.1px solid white;
             padding-right: 0.5ch;
+
+            line-height: 1em
         }
-    } > div:has(#top) + *:hover .scrolldowntext {
-        animation-play-state: paused;
+
+        p.splash {
+            animation:
+                2s 2s 1 ease-in both fade-in,
+                calc(3s * 4) 2s linear infinite splash,
+                2.5s 3s infinite ease-in-out alternate pulsate;
+
+            text-align: right;
+            border-right: 0.1px solid white;
+            padding-right: 0.5ch;
+
+            line-height: 1em;
+
+            min-width: 28ch;
+            overflow-x: hidden;
+            scrollbar-width: none;
+        }
+
+        &:hover :is(.scrolldowntext, .splash) {
+            animation-play-state: paused;
+        }
+
+        &:has(.splash) {
+            scrollbar-width: none;
+        }
     }
 
     #top + * {
@@ -225,6 +251,14 @@ article {
         translate: 0px -1em;
     }
     to {
-        translate: 0px calc(-2em - 2.1px);
+        translate: 0px calc(-1em * 2);
+    }
+}
+
+@keyframes splash {
+    from {
+        translate: 0px -1em;
+    } to {
+        translate: 0px calc(-1em * 4);
     }
 }
