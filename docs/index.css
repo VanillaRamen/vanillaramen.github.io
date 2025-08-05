@@ -239,7 +239,7 @@ article {
 
 @keyframes slide-in {
     from {
-        translate: 300% 0;
+        translate: 100vw 0;
     } to {
         translate: 0%;
     }
