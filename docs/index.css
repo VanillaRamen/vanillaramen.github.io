@@ -31,7 +31,12 @@ body {
     color: #000;
 }
 
-#sitenav {
+a {
+    color: pink;
+    text-decoration-style: dashed;
+}
+
+.sitenav {
     list-style: inside;
     nav {
         margin-bottom: 1em;
@@ -42,21 +47,9 @@ body {
         font-size: small;
     }
 
-    a {
-        color: pink;
-    }
-
     &:last-child {
         margin-bottom: 1em;
     }
-}
-
-a:not(a[rel="noreferrer noopener"]) {
-    color: unset;
-    text-decoration: none;
-} a#return {
-    color: pink;
-    text-decoration: underline;
 }
 
 .cmd {
@@ -92,6 +85,11 @@ header {
             2s 4.5s infinite alternate ease-in-out pulsate;
 
         flex: 1;
+
+        a {
+            color: unset;
+            text-decoration: none;
+        }
     }
 
     > div:has(#top) + div {
