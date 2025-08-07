@@ -114,13 +114,13 @@ header {
         p.splash {
             animation:
                 2s 3s 1 ease-in both fade-in,
-                calc(2.5s * 5) 3s linear infinite splash;
+                calc(3s * 5) 3s linear infinite splash;
 
             text-align: right;
             border-right: 0.1px solid white;
             padding-right: 0.5ch;
 
-            line-height: 1em;
+            line-height: 1.25em;
 
             min-width: 28ch;
             overflow-x: hidden;
@@ -256,6 +256,6 @@ article {
     from {
         translate: 0px -1em;
     } to {
-        translate: 0px calc(-1em * 5);
+        translate: 0px calc(0.25em + -1.25em * 5);
     }
 }
