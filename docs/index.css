@@ -17,7 +17,7 @@ html {
 
 body {
     min-width: 50ch;
-    max-width: 80ch;
+    max-width: 60ch;
 
     > *:hover .cmd::before {
         animation: 0.25s steps(2, jump-none) 3 blink;
