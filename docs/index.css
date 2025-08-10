@@ -154,7 +154,9 @@ article {
     /* hide bg image */
     box-shadow: inset 100vw 100vh #000;
     /* bg image and styling */
-    background: linear-gradient(to top, #000, 1px, #0000), url("media/clouds_foreground_pole_newsprinted_cmyk.jpg");
+    background:
+        linear-gradient(to top, #000, 1px, #0000),
+        url("media/lowres_pole_clouds_higher_res_newsprinted.jpg");
     background-size: cover;
     background-position: center;
 
