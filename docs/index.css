@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    min-width: 50ch;
+    min-width: 40ch;
     max-width: 60ch;
 
     > *:hover .cmd::before {
