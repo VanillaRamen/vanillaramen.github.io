@@ -18,10 +18,11 @@ timepiece.textContent =
     days[now.getDay()] + " "
     + months[now.getMonth()] + " "
     + now.getDate() + " ";
-clock.textContent =
-    hours.toString().padStart(2, "0") + ":"
-    + mins.toString().padStart(2, "0") + ":"
-    + secs.toString().padStart(2, "0");
+// clock.textContent =
+//     hours.toString().padStart(2, "0") + ":"
+//     + mins.toString().padStart(2, "0") + ":"
+//     + secs.toString().padStart(2, "0");
+updateClock();
 
 function updateClock() {
     secs++;
@@ -41,8 +42,11 @@ function updateClock() {
         clearInterval(countingup);
     }
 
-    clock.textContent = secs.toString();
+    clock.textContent =
+        hours.toString().padStart(2, "0") + ":"
+        + mins.toString().padStart(2, "0") + "["
+        + secs.toString().padStart(2, "0") + "]";
 }
 
 // setInterval(updateClock(), 1000);
-const countingup = setInterval(updateClock(), 1000);
+const countingup = setInterval(updateClock, 1000);
