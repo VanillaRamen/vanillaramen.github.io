@@ -40,6 +40,8 @@ function updateClock() {
         hours = 0;
         // handle new date
         clearInterval(countingup);
+        clock.textContent = "Go to sleep.";
+        timepiece.textContent = "It's tomorrow.";
     }
 
     clock.textContent =
