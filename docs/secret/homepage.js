@@ -14,15 +14,12 @@ let hours = now.getHours();
 let mins = now.getMinutes();
 let secs = now.getSeconds();
 
-timepiece.textContent =
-    days[now.getDay()] + " "
-    + months[now.getMonth()] + " "
-    + now.getDate() + " ";
-// clock.textContent =
-//     hours.toString().padStart(2, "0") + ":"
-//     + mins.toString().padStart(2, "0") + ":"
-//     + secs.toString().padStart(2, "0");
-updateClock();
+function setDay() {
+    timepiece.textContent =
+        days[now.getDay()] + " "
+        + months[now.getMonth()] + " "
+        + now.getDate() + " ";
+}
 
 function updateClock() {
     secs++;
@@ -38,10 +35,9 @@ function updateClock() {
 
     if (hours >= 24) {
         hours = 0;
-        // handle new date
-        clearInterval(countingup);
-        clock.textContent = "Go to sleep.";
-        timepiece.textContent = "It's tomorrow.";
+
+        now = new Date(Date.now());
+        setDay();
     }
 
     clock.textContent =
@@ -50,5 +46,6 @@ function updateClock() {
         + secs.toString().padStart(2, "0") + "]";
 }
 
-// setInterval(updateClock(), 1000);
+window.addEventListener("load", setDay);
+window.addEventListener("load", updateClock);
 const countingup = setInterval(updateClock, 1000);
