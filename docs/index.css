@@ -1,263 +1,54 @@
+:root {
+    --background-color: #fff;
+}
+
 html {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    color: #fff;
-    background:
-        linear-gradient(to right, #ccc2, 1px, #0000),
-        linear-gradient(to left, #ccc2, 1px, #0000),
-        #000;
-
-    font-family: 'Courier New', Courier, monospace;
-
     scrollbar-width: thin;
-    scrollbar-color: #777 #000;
 }
 
 body {
-    min-width: 40ch;
-    max-width: 60ch;
+    max-width: 50ch;
 
-    > *:hover .cmd::before {
-        animation: 0.25s steps(2, jump-none) 3 blink;
-    }
+    line-height: 1.4em;
+
+    font-family: 'Times New Roman', Times, serif;
 }
 
-::selection {
-    text-shadow: 1px 1px 0px #0004;
-
-    background-color: #fff;
-    color: #000;
+article > header { /* big title */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: 1px dashed underline #000;
 }
 
-a {
-    color: pink;
-    text-decoration-style: dashed;
+main > section {
+    background:
+        linear-gradient(
+        to bottom right,
+            #fffc,
+            #fff8
+        ) padding-box,
+        linear-gradient(
+        to bottom right,
+            #fcc,
+            #cfc
+        ) border-box,
+        #fcc4;
+    border: 2px solid #0000;
+    border-radius: 0.5em;
+
+    padding: 0ch 1ch 1em;
+
+    margin-bottom: 1em;
 }
 
-.sitenav {
-    list-style: inside;
-    nav {
-        margin-bottom: 1em;
-    }
+nav {
+    font-family: 'Courier New', Courier, monospace;
 
     li::marker {
-        content: "▷ ";
-        font-size: small;
-    }
-
-    &:last-child {
-        margin-bottom: 1em;
-    }
-}
-
-.cmd {
-    &:not(#top) {
-        text-decoration: solid underline;
-    }
-
-    &::before {
-        font-family: sans-serif;
-        font-size: smaller;
-        content: "> ";
-    }
-}
-
-p {
-    text-indent: 1ch;
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    border-bottom: 0.1px solid white;
-
-    overflow-x: hidden;
-    > div:has(#top) {
-        line-height: 0.25em;
-
-        animation:
-            4s 0.5s 1 both ease-in-out slide-in,
-            4s 0.5s 1 backwards ease-in fade-in,
-            2s 4.5s infinite alternate ease-in-out pulsate;
-
-        flex: 1;
-
-        a {
-            color: unset;
-            text-decoration: none;
-        }
-    }
-
-    > div:has(#top) + div {
-        flex: 1;
-
-        height: 1em;
-
-        overflow-y: hidden;
-
-        p.scrolldowntext {
-            animation:
-                1s 2s infinite ease-in-out scrolldown,
-                2s 2s 1 ease-in both fade-in;
-
-            text-align: right;
-            border-right: 0.1px solid white;
-            padding-right: 0.5ch;
-
-            line-height: 1em
-        }
-
-        p.splash {
-            animation:
-                2s 3s 1 ease-in both fade-in,
-                calc(3s * 5) 3s linear infinite splash;
-
-            text-align: right;
-            border-right: 0.1px solid white;
-            padding-right: 0.5ch;
-
-            line-height: 1.25em;
-
-            min-width: 28ch;
-            overflow-x: hidden;
-            scrollbar-width: none;
-        }
-
-        &:hover :is(.scrolldowntext, .splash) {
-            animation-play-state: paused;
-        }
-
-        &:has(.splash) {
-            scrollbar-width: none;
-        }
-    }
-
-    #top + * {
-        text-decoration: underline;
-    }
-
-    &:hover {
-        background-image: linear-gradient(to top, #777, 1px, #000);
-    }
-}
-
-article {
-    /* regular styling stuff */
-    border: 1px solid white;
-    padding: 0px 1ch;
-    margin: 1em 0px;
-
-    /* hide bg image */
-    box-shadow: inset 100vw 100vh #000;
-    /* bg image and styling */
-    background:
-        linear-gradient(to top, #000, 1px, #0000),
-        url("media/lowres_pole_clouds_higher_res_newsprinted.jpg");
-    background-size: cover;
-    background-position: center;
-
-    /* opaque background */
-    background-color: #000;
-
-    transition:
-        rotate 2s 0.5s,
-        scale 2s 0.5s,
-        box-shadow 2s 0.5s;
-
-    &:hover {
-        /* show bg image (darkened) */
-        box-shadow: inset 100vw 100vh #000b;
-
-        /* look fancy to show hover */
-        rotate: -0.4deg;
-        scale: 1.0025;
-
-        transition:
-            rotate 4s,
-            scale 2s,
-            box-shadow 2s ease-in-out;
-    }
-}
-
-@keyframes rainbowlight {
-    0% {
-        background-color: #700;
-    } 16.67% {
-        background-color: #770;
-    } 33.33% {
-        background-color: #070;
-    } 50.00% {
-        background-color: #077;
-    } 66.67% {
-        background-color: #007;
-    } 83.33% {
-        background-color: #707;
-    } 100.0% {
-        background-color: #700;
-    }
-} /* currently unused */
-
-@keyframes pulselight {
-    0%, 70% {
-        background-color: #000;
-    } 100% {
-        background-color: #fff;
-    }
-} /* currently unused */
-
-@keyframes blink {
-    from {
-        color: currentColor;
-    } to {
-        color: transparent;
-    }
-}
-
-@keyframes pulsate {
-    0%, 80% {
-        text-shadow: none;
-    } 100% {
-        text-shadow:
-            -0.5px 0.5px 0px #f88,
-            0.5px -0.5px 0px #8ff;
-    }
-}
-
-@keyframes fade-in {
-    from {
-        color: #0000;
-        border-color: transparent;
-    } to {
-        color: #fff;
-        border-color: currentColor;
-    }
-}
-
-@keyframes slide-in {
-    from {
-        translate: 100vw 0;
-    } to {
-        translate: 0%;
-    }
-}
-
-@keyframes scrolldown {
-    from {
-        translate: 0px -1em;
-    }
-    to {
-        translate: 0px calc(-1em * 2);
-    }
-}
-
-@keyframes splash {
-    from {
-        translate: 0px -1em;
-    } to {
-        translate: 0px calc(0.25em + -1.25em * 5);
+        content: "≻ ";
     }
 }

@@ -1,5 +1,5 @@
-const timepiece = document.getElementById("timepiece");
-const clock = document.getElementById("clock");
+const timepiece = document.getElementById("daypiece");
+const clock = document.getElementById("timepiece");
 let now = new Date(Date.now());
 
 const months = [
