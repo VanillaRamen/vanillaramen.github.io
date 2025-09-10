@@ -33,8 +33,8 @@ main > section { /* body text sections */
     background:
         linear-gradient(
         to bottom right,
-            #fffc,
-            #fff8
+            #fff8,
+            #fff6
         ) padding-box,
         linear-gradient(
         to bottom right,
@@ -53,7 +53,9 @@ main > section { /* body text sections */
 nav {
     font-family: 'Courier New', Courier, monospace;
 
-    li::marker {
+    list-style: outside;
+
+    *::marker {
         content: "≻ ";
     }
 }
@@ -61,12 +63,10 @@ nav {
 a {
     background:
         linear-gradient(
-            to right,
-            #fcc,
-            #cfc,
-            #ccf
-        ) text,
-        #88f text;
-    color: transparent;
+            to bottom right,
+            #c88,
+            #44c
+        ) text;
+    color: #fff4;
     text-decoration: 1px solid underline #aaf;
 }
