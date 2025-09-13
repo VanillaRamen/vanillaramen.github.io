@@ -24,6 +24,47 @@ body {
 article > header { /* big title */
     text-align: center;
     text-decoration: 1px dashed underline;
+
+    animation: 5s 1s ease-in 1 forwards concentrate_header;
+
+    background: linear-gradient(
+        to bottom right,
+        #f88,
+        #800
+    ) text;
+}
+
+@keyframes concentrate_header {
+    0% {
+        text-decoration: none;
+        color: #fff;
+        text-shadow: /* ↑↗→↘↓↙←↖ */
+            4ch 0ch 0px #0000, /* → */
+            -4ch 0ch 0px #0000, /* ← */
+            0ch 2ch 0px #0000, /* ↓ */
+            0ch -2ch 0px #0000, /* ↑ */
+            2.84ch 1.42ch 0px #0000, /* ↘ */
+            2.84ch -1.42ch 0px #0000, /* ↗ */
+            -2.84ch 1.42ch 0px #0000, /* ↙ */
+            -2.84ch -1.42ch 0px #0000; /* ↖ */
+    }
+    25% {
+        text-decoration: none;
+        color: #fff8;
+        text-shadow: /* ↑↗→↘↓↙←↖ */
+            4ch 0ch 0px, /* → */
+            -4ch 0ch 0px, /* ← */
+            0ch 2ch 0px, /* ↓ */
+            0ch -2ch 0px, /* ↑ */
+            2.84ch 1.42ch 0px, /* ↘ */
+            2.84ch -1.42ch 0px, /* ↗ */
+            -2.84ch 1.42ch 0px, /* ↙ */
+            -2.84ch -1.42ch 0px; /* ↖ */
+    } 100% {
+        text-decoration: 1px dashed underline #fff;
+        color: #fff;
+        text-shadow: none;
+    }
 }
 
 main > section { /* body text sections */
