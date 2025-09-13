@@ -15,39 +15,38 @@ body {
 
     line-height: 1.4em;
 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Courier New', Courier, monospace;
 
     background: #000;
     color: #fff;
 }
 
 article > header { /* big title */
-    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     text-decoration: 1px dashed underline;
 }
 
 main > section { /* body text sections */
-    color: #000;
+    color: #fff;
 
     background:
         linear-gradient(
-        to bottom right,
-            #fff8,
-            #fff6
-        ) padding-box,
-        linear-gradient(
-        to bottom right,
-            #fcc8,
-            #cfc8
-        ) border-box,
-        #fcc4;
-    border: 2px solid #0000;
-    border-radius: 0.5em;
+            to bottom right,
+            #8228,
+            #a628
+        ),
+        #2224;
+    /* border: 2px solid #fff4;
+    border-radius: 0.5em; */
+    border: 2px solid #f884;
 
     padding: 0ch 1ch 1em;
 
     margin-bottom: 1em;
+
+    > p {
+        text-indent: 1ch;;
+    }
 }
 
 nav {
@@ -63,10 +62,10 @@ nav {
 a {
     background:
         linear-gradient(
-            to bottom right,
-            #c88,
-            #44c
+        to right,
+            #f88c,
+            #848c
         ) text;
-    color: #fff4;
-    text-decoration: 1px solid underline #aaf;
+    color: transparent;
+    text-decoration: 1px dashed underline #c88;
 }
