@@ -25,7 +25,7 @@ article > header { /* big title */
     text-align: center;
     text-decoration: 1px dashed underline;
 
-    animation: 5s 1s ease-in 1 forwards concentrate_header;
+    animation: 5s 1.5s ease-in-out 1 forwards concentrate_header;
 
     background: linear-gradient(
         to bottom right,
