@@ -15,7 +15,7 @@ body {
 
     line-height: 1.4em;
 
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
 
     background: #000;
     color: #fff;
@@ -72,14 +72,11 @@ main > section { /* body text sections */
 
     background:
         linear-gradient(
-            to bottom right,
-            #8228,
-            #a628
-        ),
-        #2224;
-    /* border: 2px solid #fff4;
-    border-radius: 0.5em; */
-    border: 2px solid #f884;
+        to bottom,
+            #0000 calc(100% - 5em),
+            #4248
+        );
+    border: 2px solid #4248;
 
     padding: 0ch 1ch 1em;
 
