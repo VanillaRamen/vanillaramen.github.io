@@ -1,109 +1,46 @@
-:root {
-    --background-color: #fff;
-}
-
 html {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    scrollbar-width: thin;
+    scrollbar-color: #866 #000;
+
+    &::selection {
+        background-color: #866;
+        color: #000;
+    }
 }
 
 body {
-    max-width: 50ch;
-
-    line-height: 1.4em;
-
-    font-family: "Courier New", Courier, monospace;
-
-    background: #000;
-    color: #fff;
-}
-
-article > header { /* big title */
-    text-align: center;
-    text-decoration: 1px dashed underline;
-
-    animation: 5s 1.5s ease-in-out 1 forwards concentrate_header;
-
-    background: linear-gradient(
-        to bottom right,
-        #f88,
-        #800
-    ) text;
-}
-
-@keyframes concentrate_header {
-    0% {
-        text-decoration: none;
-        color: #fff;
-        text-shadow: /* ↑↗→↘↓↙←↖ */
-            4ch 0ch 0px #0000, /* → */
-            -4ch 0ch 0px #0000, /* ← */
-            0ch 2ch 0px #0000, /* ↓ */
-            0ch -2ch 0px #0000, /* ↑ */
-            2.84ch 1.42ch 0px #0000, /* ↘ */
-            2.84ch -1.42ch 0px #0000, /* ↗ */
-            -2.84ch 1.42ch 0px #0000, /* ↙ */
-            -2.84ch -1.42ch 0px #0000; /* ↖ */
-    }
-    25% {
-        text-decoration: none;
-        color: #fff8;
-        text-shadow: /* ↑↗→↘↓↙←↖ */
-            4ch 0ch 0px, /* → */
-            -4ch 0ch 0px, /* ← */
-            0ch 2ch 0px, /* ↓ */
-            0ch -2ch 0px, /* ↑ */
-            2.84ch 1.42ch 0px, /* ↘ */
-            2.84ch -1.42ch 0px, /* ↗ */
-            -2.84ch 1.42ch 0px, /* ↙ */
-            -2.84ch -1.42ch 0px; /* ↖ */
-    } 100% {
-        text-decoration: 1px dashed underline #fff;
-        color: #fff;
-        text-shadow: none;
-    }
-}
-
-main > section { /* body text sections */
-    color: #fff;
+    max-width: 40ch;
 
     background:
         linear-gradient(
         to bottom,
-            #0000 calc(100% - 5em),
-            #4248
-        );
-    border: 2px solid #4248;
+        #000,
+        #201
+        ) fixed,
+        #000;
+    color: #866;
 
-    padding: 0ch 1ch 1em;
+    font-family: Consolas, 'Courier New', Courier, monospace;
+}
 
+article > main > section {
+    background: #0004 border-box;
+    border: 2px solid #302;
+    padding: 0px 1ch;
     margin-bottom: 1em;
 
     > p {
-        text-indent: 1ch;;
+        text-indent: 1ch;
     }
 }
 
-nav {
-    font-family: 'Courier New', Courier, monospace;
-
-    list-style: outside;
-
-    *::marker {
-        content: "≻ ";
-    }
+.underlined {
+    text-decoration: 1px dashed underline;
 }
 
-a {
-    background:
-        linear-gradient(
-        to right,
-            #f88c,
-            #848c
-        ) text;
-    color: transparent;
-    text-decoration: 1px dashed underline #c88;
+a[href]:not([href=""]) {
+    color: #a66;
 }
