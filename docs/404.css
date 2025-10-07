@@ -3,6 +3,8 @@ html {
     flex-direction: column;
     align-items: center;
 
+    scrollbar-color: #866 #000;
+
     &::selection {
         background-color: #866;
         color: #000;
