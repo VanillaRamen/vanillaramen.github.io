@@ -12,28 +12,63 @@ html {
 }
 
 body {
-    max-width: 40ch;
+    max-width: 45ch;
 
-    background:
-        linear-gradient(
-        to bottom,
-        #000,
-        #201
-        ) fixed,
-        #000;
-    color: #866;
+    background-color: #000;
+    color: #856;
 
     font-family: Consolas, 'Courier New', Courier, monospace;
 }
 
-article > main > section {
-    background: #0004 border-box;
-    border: 2px solid #302;
+body > main > div[id] {
+    background-color: #1004;
+    border: 1px solid #4238;
     padding: 0px 1ch;
     margin-bottom: 1em;
 
     > p {
         text-indent: 1ch;
+    }
+
+    transition:
+            box-shadow 2s 1s ease-out,
+            background-color 2s 1s ease-out;
+
+    &:hover {
+        background-color: #100008;
+        box-shadow:
+            1em 2em 0px #100008,
+            1em 2em 0px #000 inset;
+
+        transition:
+            box-shadow 1s ease-out,
+            background-color 1s ease-out;
+    }
+}
+
+body > header {
+    animation: 5s 0.25s both 1 ease-in fade-in;
+}
+
+@keyframes fade-in {
+    from {
+        /* visibility: hidden; */
+        color: transparent;
+    } to {
+        /* visibility: visible; */
+        color: currentColor;
+    }
+}
+
+span.pulse {
+    animation: 8s 0s infinite ease-out pulse;
+}
+
+@keyframes pulse {
+    0%, 70% {
+        color: currentColor;
+    } 75% {
+        color: #c66;
     }
 }
 
