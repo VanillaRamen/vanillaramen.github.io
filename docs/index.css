@@ -17,7 +17,7 @@ body {
     background-color: #000;
     color: #856;
 
-    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-family: Consolas, "Courier New", Courier, monospace;
 }
 
 main > section[id] {
@@ -61,13 +61,14 @@ body > header {
 }
 
 span.pulse {
-    animation: 8s 0s infinite ease-out pulse;
+    text-wrap: nowrap;
+    animation: 3s 0s infinite ease-out alternate pulse;
 }
 
 @keyframes pulse {
-    0%, 70% {
+    0%, 80% {
         color: currentColor;
-    } 75% {
+    } 100% {
         color: #c66;
     }
 }
