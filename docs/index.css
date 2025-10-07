@@ -47,7 +47,7 @@ body > main > div[id] {
 }
 
 body > header {
-    animation: 5s 0.25s both 1 ease-in fade-in;
+    animation: 8s 0s both 1 ease-out fade-in;
 }
 
 @keyframes fade-in {
