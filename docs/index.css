@@ -20,7 +20,7 @@ body {
     font-family: Consolas, 'Courier New', Courier, monospace;
 }
 
-body > main > div[id] {
+main > section[id] {
     background-color: #1004;
     border: 1px solid #4238;
     padding: 0px 1ch;
