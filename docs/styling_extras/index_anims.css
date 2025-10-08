@@ -1,0 +1,26 @@
+body > header {
+    animation: 8s 0s both 1 ease-out fade-in;
+}
+
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        color: transparent;
+    } to {
+        visibility: visible;
+        color: currentColor;
+    }
+}
+
+span.pulse {
+    text-wrap: nowrap;
+    animation: 3s 0s infinite ease-out alternate pulse;
+}
+
+@keyframes pulse {
+    0%, 80% {
+        color: currentColor;
+    } 100% {
+        color: #c66;
+    }
+}
