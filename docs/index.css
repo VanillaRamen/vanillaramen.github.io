@@ -31,18 +31,14 @@ main > section[id] {
     }
 
     transition:
-            box-shadow 2s 1s ease-out,
-            background-color 2s 1s ease-out;
+            box-shadow 2s 0.5s ease-out;
 
     &:hover {
-        background-color: #100008;
         box-shadow:
-            1em 2em 0px #100008,
-            1em 2em 0px #000 inset;
+            0.25em -0.25em #181212;
 
         transition:
-            box-shadow 1s ease-out,
-            background-color 1s ease-out;
+            box-shadow 1s ease-out;
     }
 }
 
@@ -52,6 +48,12 @@ main > section[id] {
 
 a[href]:not([href=""]) {
     color: #a66;
+    transition: text-shadow 2s 0.5s ease-out;
+    &:hover {
+        text-shadow:
+            0.25em -0.25em 0px #422;
+        transition: text-shadow 1s ease-out;
+    }
 }
 
 ul {
