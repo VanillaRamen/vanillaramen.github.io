@@ -59,3 +59,16 @@ a[href]:not([href=""]) {
 ul {
     list-style: inside circle;
 }
+
+span.pulse {
+    text-wrap: nowrap;
+    animation: 3s 0s infinite ease-out alternate pulse;
+}
+
+@keyframes pulse {
+    0%, 80% {
+        color: currentColor;
+    } 100% {
+        color: #c66;
+    }
+}
