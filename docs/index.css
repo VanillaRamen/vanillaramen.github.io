@@ -3,72 +3,48 @@ html {
     flex-direction: column;
     align-items: center;
 
-    scrollbar-color: #866 #000;
+    font-family: "Noto Sans Mono", monospace, "Noto Serif", serif, "Noto Sans", sans-serif;
 
-    &::selection {
-        background-color: #866;
-        color: #000;
-    }
+    background:
+        linear-gradient(to top,
+        #866a,
+        #0000
+        ) fixed,
+        linear-gradient(45deg,
+        #fcca  0%, #fcc4  20%,
+        #ffca 20%, #ffc4  40%,
+        #cfca 40%, #cfc4  60%,
+        #cffa 60%, #cff4  80%,
+        #ccfa 80%, #ccf4 100%
+        ) fixed,
+        #211;
 }
 
 body {
-    width: 45ch;
+    min-width: 25ch;
+    max-width: 40ch;
 
-    background-color: #000;
-    color: #856;
-
-    font-family: Consolas, "Courier New", Courier, monospace;
+    color: #caa;
 }
 
-main > section[id] {
-    background-color: #1004;
-    border: 1px solid #4238;
+body > header, section {
+    border: 1px dashed #fefa;
     padding: 0px 1ch;
-    margin-bottom: 1em;
+    margin: 0px 0px 0.5em;
 
-    > p {
-        text-indent: 1ch;
-    }
-
-    transition:
-            box-shadow 2s 0.5s ease-out;
-
-    &:hover {
-        box-shadow:
-            0.25em -0.25em #181212;
-
-        transition:
-            box-shadow 1s ease-out;
-    }
+    background: #544c;
+    backdrop-filter: sepia(0.2) blur(4px);
 }
 
-.underlined {
-    text-decoration: 1px dashed underline;
+section > .heading {
+    text-decoration: solid underline;
 }
 
-a[href]:not([href=""]) {
-    color: #a66;
-    transition: text-shadow 2s 0.5s ease-out;
-    &:hover {
-        text-shadow:
-            0.25em -0.25em 0px #422;
-        transition: text-shadow 1s ease-out;
-    }
+a {
+    color: #fcc;
+    text-decoration: 2px dashed underline;
 }
 
-ul {
-    list-style: inside circle;
-}
-
-span.pulse {
-    text-wrap: nowrap;
-    animation: 3s 0s infinite ease-out alternate pulse;
-}
-
-@keyframes pulse {
-    0%, 80% {
-        color: currentColor;
-    } 100% {
-        color: #c66;
-    }
+a[href=""], a:not([href]) {
+    color: #88f;
 }
