@@ -7,24 +7,41 @@ html {
 
     background:
         linear-gradient(to top,
-        #866a,
-        #0000
+            #8668,
+            #0000
         ) fixed,
         linear-gradient(45deg,
-        #fcca  0%, #fcc4  20%,
-        #ffca 20%, #ffc4  40%,
-        #cfca 40%, #cfc4  60%,
-        #cffa 60%, #cff4  80%,
-        #ccfa 80%, #ccf4 100%
+            #c88a  0%, #c886  20%,
+            #cc8a 20%, #cc86  40%,
+            #8c8a 40%, #8c86  60%,
+            #8cca 60%, #8cc6  80%,
+            #88ca 80%, #88c6 100%
         ) fixed,
-        #211;
+        #000;
+}
+
+h1 {
+    letter-spacing: 1px;
+    &::after {
+        margin: 0px 2px;
+        content: "_";
+        animation: 1.2s steps(2, jump-none) infinite faux-cursor-blink;
+    }
+}
+
+@keyframes faux-cursor-blink {
+    0% {
+        color: currentColor;
+    } 100% {
+        color: #0000;
+    }
 }
 
 body {
     min-width: 25ch;
     max-width: 40ch;
 
-    color: #caa;
+    color: #fcc;
 }
 
 body > header, section {
@@ -34,14 +51,24 @@ body > header, section {
 
     background: #544c;
     backdrop-filter: sepia(0.2) blur(4px);
+
+    p {
+        text-indent: 2ch;
+    }
 }
 
 section > .heading {
     text-decoration: solid underline;
 }
 
+nav details {
+    ul li::marker {
+        content: "> ";
+    }
+}
+
 a {
-    color: #fcc;
+    color: #f98;
     text-decoration: 2px dashed underline;
 }
 
