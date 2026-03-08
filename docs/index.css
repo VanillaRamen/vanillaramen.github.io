@@ -69,6 +69,7 @@ footer {
 section {
     padding: 0ch 2ch;
     margin: 1.5em 0ch;
+    &:first-of-type { margin-top: 0em; }
 
     background: var(--bgc1);
     box-shadow:
