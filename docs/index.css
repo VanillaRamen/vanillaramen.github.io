@@ -1,17 +1,33 @@
 :root {
+    /* background-color */
     --bgc0: #140814ff;
     --bgc1: #111111ff;
     --bgc2: #440011ff;
     --bgc3: #a68f;
 
-    --hid0: #0000;
-
+    /* text */
     --txt0: #ffff;
     --txt1: #eddf;
     --txt2: #c8cf;
     --txt2f: #c8cc;
 
+    /* link */
     --lnk0: #c68f;
+
+    /* hidden */
+    --hid0: #0000;
+
+    /* linear-gradient presets */
+    --rb8:
+            #fcc8,
+            #ffc8,
+            #cfc8,
+            #cff8,
+            #ccf8,
+            #fcf8;
+    --fade_down:
+        #fff4,
+        #0004;
 }
 
 html {
@@ -22,19 +38,24 @@ html {
     background: var(--bgc0);
     color: var(--txt1);
 
-    margin: 0ch 1ch;
+    padding: 0ch 2ch;
+
+    /* scrollbar customization */
+    scrollbar-color: var(--bgc1) var(--txt2);
 }
 
 body {
     max-width: 65ch;
     min-width: 40ch;
 
-    font-family: monospace;
+    font-family: "courier new", consolas, "noto sans mono", monospace, serif, sans-serif;
 }
 
 header {
     border: 1px solid var(--hid0);
     margin-top: 1.5em;
+
+    text-decoration: solid underline var(--txt2);
 }
 
 footer {
@@ -71,4 +92,12 @@ a {
     &:hover {
         text-decoration: 1px underline solid;
     }
+}
+
+
+::selection {
+    background-color: var(--txt1);
+    color: var(--bgc1);
+} a::selection {
+    background-color: var(--lnk0);
 }
