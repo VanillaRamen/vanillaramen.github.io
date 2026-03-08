@@ -2,7 +2,7 @@
     /* background-color */
     --bgc0: #140814ff;
     --bgc1: #111111ff;
-    --bgc2: #440011ff;
+    --bgc2: #44001188;
     --bgc3: #a68f;
 
     /* text */
@@ -72,12 +72,22 @@ section {
 
     background: var(--bgc1);
     box-shadow:
+        0ch 0ch 0px var(--bgc2),
         1ch 1ch 0px var(--bgc3);
 
     border: 1px solid;
 
     position: relative;
     right: 0.5ch;
+
+    /* animate te box shadow */
+    transition: 0.7s ease-in box-shadow;
+    &:hover {
+        transition: 0.5s ease-in-out box-shadow;
+        box-shadow:
+            1ch 1ch 0px var(--bgc2),
+            1ch 1ch 0px var(--bgc3);
+    }
 }
 
 section p {
