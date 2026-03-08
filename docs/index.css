@@ -1,77 +1,74 @@
+:root {
+    --bgc0: #140814ff;
+    --bgc1: #111111ff;
+    --bgc2: #440011ff;
+    --bgc3: #a68f;
+
+    --hid0: #0000;
+
+    --txt0: #ffff;
+    --txt1: #eddf;
+    --txt2: #c8cf;
+    --txt2f: #c8cc;
+
+    --lnk0: #c68f;
+}
+
 html {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    font-family: "Noto Sans Mono", monospace, "Noto Serif", serif, "Noto Sans", sans-serif;
+    background: var(--bgc0);
+    color: var(--txt1);
 
-    background:
-        linear-gradient(to top,
-            #8668,
-            #0000
-        ) fixed,
-        linear-gradient(45deg,
-            #c88a  0%, #c886  20%,
-            #cc8a 20%, #cc86  40%,
-            #8c8a 40%, #8c86  60%,
-            #8cca 60%, #8cc6  80%,
-            #88ca 80%, #88c6 100%
-        ) fixed,
-        #000;
-}
-
-h1 {
-    letter-spacing: 1px;
-    &::after {
-        margin: 0px 2px;
-        content: "_";
-        animation: 1.2s steps(2, jump-none) infinite faux-cursor-blink;
-    }
-}
-
-@keyframes faux-cursor-blink {
-    0% {
-        color: currentColor;
-    } 100% {
-        color: #0000;
-    }
+    margin: 0ch 1ch;
 }
 
 body {
-    min-width: 25ch;
-    max-width: 40ch;
+    max-width: 65ch;
+    min-width: 40ch;
 
-    color: #fcc;
+    font-family: monospace;
 }
 
-body > header, section {
-    border: 1px dashed #fefa;
-    padding: 0px 1ch;
-    margin: 0px 0px 0.5em;
-
-    background: #544c;
-    backdrop-filter: sepia(0.2) blur(4px);
-
-    p {
-        text-indent: 2ch;
-    }
+header {
+    border: 1px solid var(--hid0);
+    margin-top: 1.5em;
 }
 
-section > .heading {
-    text-decoration: solid underline;
+footer {
+    position: absolute;
+    left: 1ch;
+
+    text-shadow:
+        2px 2px 0px var(--txt2f);
 }
 
-nav details {
-    ul li::marker {
-        content: "> ";
-    }
+section {
+    padding: 0ch 2ch;
+    margin: 1.5em 0ch;
+
+    background: var(--bgc1);
+    box-shadow:
+        1ch 1ch 0px var(--bgc3);
+
+    border: 1px solid;
+
+    position: relative;
+    right: 0.5ch;
 }
+
+section p {
+    text-indent: 2ch;
+}
+
 
 a {
-    color: #f98;
-    text-decoration: 2px dashed underline;
-}
+    color: var(--lnk0);
+    text-decoration: 1px underline dashed;
 
-a[href=""], a:not([href]) {
-    color: #88f;
+    &:hover {
+        text-decoration: 1px underline solid;
+    }
 }
