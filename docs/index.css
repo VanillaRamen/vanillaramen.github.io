@@ -105,6 +105,19 @@ a {
     }
 }
 
+ul, ul details {
+    padding: 0ch;
+    list-style: disc inside;
+
+    > li > ul {
+        text-indent: 2ch;
+        list-style-position: inside;
+        > li::marker {
+            content: "- ";
+        }
+    }
+}
+
 
 ::selection {
     background-color: var(--txt1);
