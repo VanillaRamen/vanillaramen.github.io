@@ -42,6 +42,7 @@ html {
 
     /* scrollbar customization */
     scrollbar-color: var(--bgc1) var(--txt2);
+    scrollbar-width: thin;
 }
 
 body {
