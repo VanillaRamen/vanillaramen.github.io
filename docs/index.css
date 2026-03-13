@@ -46,7 +46,7 @@ html {
 }
 
 body {
-    max-width: 65ch;
+    max-width: 60vw;
     min-width: 40ch;
 
     font-family: "courier new", consolas, "noto sans mono", monospace, serif, sans-serif;
