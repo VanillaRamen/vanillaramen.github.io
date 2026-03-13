@@ -46,7 +46,7 @@ html {
 }
 
 body {
-    max-width: 60vw;
+    width: 60vw;
     min-width: 40ch;
 
     font-family: "courier new", consolas, "noto sans mono", monospace, serif, sans-serif;
@@ -61,7 +61,9 @@ header {
 
 footer {
     position: absolute;
-    left: 1ch;
+    right: 0ch;
+    top: 2ch;
+    writing-mode: sideways-rl;
 
     text-shadow:
         2px 2px 0px var(--txt2f);
