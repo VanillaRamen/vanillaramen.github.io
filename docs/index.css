@@ -4,6 +4,7 @@
     --bgc1: #111111ff;
     --bgc2: #44001188;
     --bgc3: #a68f;
+    --bgc3f: #a688;
 
     /* text */
     --txt0: #ffff;
@@ -84,13 +85,33 @@ section {
     position: relative;
     right: 0.5ch;
 
-    /* animate te box shadow */
-    transition: 0.7s ease-in box-shadow;
+    /* animate the box */
+    transition:
+        0.7s 0s ease-in box-shadow,
+        0.5s 0s ease-out translate;
     &:hover {
-        transition: 0.5s ease-in-out box-shadow;
+        transition:
+            0.5s 0s ease-in-out box-shadow,
+            0.5s 0s ease-out translate;
         box-shadow:
             1ch 1ch 0px var(--bgc2),
             1ch 1ch 0px var(--bgc3);
+        rotate: 0deg;
+        translate: 0px -0.125em;
+        animation: 0.75s 0s ease-in-out 1 alternate both refade;
+    }
+}
+
+@keyframes refade {
+    0% {
+        /* filter: grayscale(0%); */
+        filter: brightness(100%);
+    } 50% {
+        /* filter: grayscale(25%); */
+        filter: brightness(150%);
+    } 100% {
+        /* filter: grayscale(0%); */
+        filter: brightness(100%);
     }
 }
 
@@ -118,6 +139,29 @@ ul, ul details {
         > li::marker {
             content: "- ";
         }
+    }
+}
+
+details {
+    summary {
+        display: inline; /* whether closed or open */
+        background: #0000;
+        outline: 1px solid #fff;
+    }
+
+    &[open] {
+        summary {
+            background: var(--bgc3);
+            outline: none;
+        }
+    }
+}
+
+summary {
+    transition: 1s 0s ease-out box-shadow;
+    &:hover {
+        box-shadow: 0.5ch 0.5ch 0px var(--bgc3f);
+        transition: 1s 0s ease-out box-shadow;
     }
 }
 
