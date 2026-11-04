@@ -1,174 +1,97 @@
 :root {
-    /* background-color */
-    --bgc0: #140814ff;
-    --bgc1: #111111ff;
-    --bgc2: #44001188;
-    --bgc3: #a68f;
-    --bgc3f: #a688;
-
-    /* text */
-    --txt0: #ffff;
-    --txt1: #eddf;
-    --txt2: #c8cf;
-    --txt2f: #c8cc;
-
-    /* link */
-    --lnk0: #c68f;
-
-    /* hidden */
-    --hid0: #0000;
-
-    /* linear-gradient presets */
-    --rb8:
-            #fcc8,
-            #ffc8,
-            #cfc8,
-            #cff8,
-            #ccf8,
-            #fcf8;
-    --fade_down:
-        #fff4,
-        #0004;
+	--bg_main: #0c080a;
+	--txt_main: #ccc;
 }
 
 html {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-    background: var(--bgc0);
-    color: var(--txt1);
+	height: 100vh;
 
-    padding: 0ch 2ch;
+	background:
+		/* overlay a gradient that fades to light on the bottom */
+		linear-gradient(to top,
+			#4442, min(4em, 10vw),
+			#0000) border-box no-repeat,
+		var(--bg_main); /* the actual color part */
 
-    /* scrollbar customization */
-    scrollbar-color: var(--bgc1) var(--txt2);
-    scrollbar-width: thin;
+	color: var(--txt_main);
+
+	font-family: "Noto Sans Mono", monospace;
 }
 
 body {
-    width: 60vw;
-    min-width: 40ch;
-
-    font-family: "courier new", consolas, "noto sans mono", monospace, serif, sans-serif;
+	width: 80vw;
+	min-width: 40ch;
+	max-width: 120ch;
 }
 
 header {
-    border: 1px solid var(--hid0);
-    margin-top: 1.5em;
+	display: block flex;
+	flex-direction: row;
+	align-items: flex-end;
+	gap: 1ch;
 
-    text-decoration: solid underline var(--txt2);
+	> :is(h1,h2,h3,h4,h5, p) {
+		/* text-align: center; */
+		&:hover {
+			color: #a89;
+		}
+	}
 }
 
-footer {
-    position: absolute;
-    right: 0ch;
-    top: 2ch;
-    writing-mode: sideways-rl;
-
-    text-shadow:
-        2px 2px 0px var(--txt2f);
+section, footer {
+	padding: 1px 1ch 0.5em;
+	margin: 1em 1ch;
+	border-radius: 1em;
 }
 
 section {
-    padding: 0ch 2ch;
-    margin: 1.5em 0ch;
-    &:first-of-type { margin-top: 0em; }
+	box-shadow: 0.5ch 0.5ch 0px #ccccff22;
 
-    background: var(--bgc1);
-    box-shadow:
-        0ch 0ch 0px var(--bgc2),
-        1ch 1ch 0px var(--bgc3);
+	background:
+		linear-gradient(150deg,
+			#0000, 10%,
+			#ccf1)
+			border-box;
 
-    border: 1px solid;
+	/* descendants */
+	> :is(h1,h2,h3,h4,h5):first-of-type {
+		border-bottom: 1px solid var(--txt_main);
 
-    position: relative;
-    right: 0.5ch;
+		&::before {
+			white-space: pre;
+			content: "# ";
+		}
 
-    /* animate the box */
-    transition:
-        0.7s 0s ease-in box-shadow,
-        0.25s 0s ease-out translate;
-    &:hover {
-        transition:
-            0.5s 0s ease-in-out box-shadow,
-            0.5s 0s ease-out translate;
-        box-shadow:
-            1ch 1ch 0px var(--bgc2),
-            1ch 1ch 0px var(--bgc3);
-        rotate: 0deg;
-        translate: 0px -0.125em;
-        animation: 0.75s 0s ease-in-out 1 alternate both refade;
-    }
+		&:hover::before {
+			color: #a89;
+		}
+	}
+
+	> p {
+		&::before {
+			content: "> ";
+		}
+
+		&:hover::before {
+			color: #a89;
+		}
+	}
 }
 
-@keyframes refade {
-    0% {
-        /* filter: grayscale(0%); */
-        filter: brightness(100%);
-    } 50% {
-        /* filter: grayscale(25%); */
-        filter: brightness(150%);
-    } 100% {
-        /* filter: grayscale(0%); */
-        filter: brightness(100%);
-    }
-}
-
-section p {
-    text-indent: 2ch;
+footer {
+	background: #4222;
 }
 
 
-a {
-    color: var(--lnk0);
-    text-decoration: 1px underline dashed;
-
-    &:hover {
-        text-decoration: 1px underline solid;
-    }
+a:link {
+	color: #fcc;
 }
 
-ul, ul details {
-    padding: 0ch;
-    list-style: disc inside;
-
-    > li > ul {
-        text-indent: 2ch;
-        list-style-position: inside;
-        > li::marker {
-            content: "- ";
-        }
-    }
-}
-
-details {
-    summary {
-        display: inline; /* whether closed or open */
-        background: #0000;
-        outline: 1px solid #fff;
-    }
-
-    &[open] {
-        summary {
-            background: var(--bgc3);
-            outline: none;
-        }
-    }
-}
-
-summary {
-    transition: 1s 0s ease-out box-shadow;
-    &:hover {
-        box-shadow: 0.5ch 0.5ch 0px var(--bgc3f);
-        transition: 1s 0s ease-out box-shadow;
-    }
-}
-
-
-::selection {
-    background-color: var(--txt1);
-    color: var(--bgc1);
-} a::selection {
-    background-color: var(--lnk0);
+a:visited {
+	color: #fcc;
+	filter: brightness(80%);
 }
