@@ -14,7 +14,7 @@ html {
 		/* overlay a gradient that fades to light on the bottom */
 		linear-gradient(to top,
 			#4442, min(4em, 10vw),
-			#0000) border-box no-repeat fixed,
+			#0000) border-box fixed no-repeat,
 		var(--bg_main); /* the actual color part */
 
 	color: var(--txt_main);
