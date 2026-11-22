@@ -14,12 +14,16 @@ html {
 		/* overlay a gradient that fades to light on the bottom */
 		linear-gradient(to top,
 			#4442, min(4em, 10vw),
-			#0000) border-box no-repeat,
+			#0000) border-box no-repeat fixed,
 		var(--bg_main); /* the actual color part */
 
 	color: var(--txt_main);
 
 	font-family: "Noto Sans Mono", monospace;
+
+	overflow: scroll;
+	scrollbar-color: #aaa4 #2224;
+	scrollbar-width: auto;
 }
 
 body {
