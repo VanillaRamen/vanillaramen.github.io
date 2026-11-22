@@ -34,8 +34,12 @@ header {
 	align-items: flex-end;
 	gap: 1ch;
 
+
 	> :is(h1,h2,h3,h4,h5, p) {
-		/* text-align: center; */
+		animation: 5s var(--hover);
+		&:is(p) {
+			animation-duration: 7s;
+		}
 		&:hover {
 			color: #a89;
 		}
@@ -50,6 +54,11 @@ section, footer {
 
 section {
 	box-shadow: 0.5ch 0.5ch 0px #ccccff22;
+	transition: box-shadow 0.5s;
+	&:hover {
+		box-shadow: 0.5ch 0.5ch 0px #ccccff33;
+		transition: box-shadow 1s;
+	}
 
 	background:
 		linear-gradient(150deg,

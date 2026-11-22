@@ -1,0 +1,17 @@
+:root {
+	--hover: ease-in-out infinite normal forwards keys_hover;
+}
+
+@keyframes keys_hover {
+	from {
+		translate: 0 0;
+	}
+
+	50% {
+		translate: 0 -0.25em;
+	}
+
+	to {
+		translate: 0 0;
+	}
+}
